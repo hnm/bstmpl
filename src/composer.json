@@ -5,6 +5,7 @@
     "keywords": ["n2n-template","n2n-tmpl-module", "n2n-module", "n2n"],
     "homepage": "https://n2n.rocks/",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Thomas Günther",
@@ -14,7 +15,8 @@
     "require": {
         "php": ">=7.0",
         "n2n/n2n-composer-module-installer": "dev-master",
-        "n2n/page": "dev-master"
+        "n2n/page": "dev-master",
+        "n2n/n2n-mail": "dev-master"
     },
     "autoload": {
         "psr-4": {
