@@ -1,0 +1,85 @@
+// Core variables and mixins
+@import "../../n2nutil-bootstrap/scss/functions";
+@import "custom/custom";
+@import "../../n2nutil-bootstrap/scss/variables";
+@import "../../n2nutil-bootstrap/scss/mixins/breakpoints";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: silver;
+	line-height: 160%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+
+article {
+	box-shadow: 4px 4px 6px rgba(0,0,0, 0.3);
+	margin: 15px;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+@if variable-exists(logo-max-width) {
+	.logo {
+		max-width: $logo-max-width;
+	}
+}
+@if variable-exists(logo-max-width-small) {
+	@include media-breakpoint-down(sm) {
+		.logo {
+			max-width: $logo-max-width-small;
+		}
+	}
+}
+
+.wrapper {
+	max-width: 600px;
+	background: white;
+	margin: 0 auto;
+	padding: 20px;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+header .wrapper {
+	border-top: 1px solid gray;
+}
+
+
+@if ($exception-header-bg) {
+	header .wrapper {
+	  background-color: $exception-header-bg;
+	}
+} @else {
+	header .wrapper {
+		border-bottom: 1px solid #ccc;
+	  }
+}
+
+footer .wrapper {
+	border-bottom: 1px solid gray;
+}
+
+address {
+	font-style: normal;
+}
+
+a {
+	color: $primary;
+}

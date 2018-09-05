@@ -1,0 +1,35 @@
+@mixin stripes($direction, $color, $num: $grid-columns, $gap: $grid-gutter-width/2, $opacity: 0.05) {
+	$length: $num;
+	
+	@if $length > 1 {
+	  $stripes: ();
+	  
+	  @for $i from 0 through $length {
+		$stripe: (100% / $length) * ($i);
+		$gap: $grid-gutter-width/2;
+		
+		@if $i == 0 {
+			$stripes: append($stripes, rgba($color, 0) 0, comma);
+			$stripes: append($stripes, rgba($color, 0) $gap, comma);
+			$stripes: append($stripes, rgba($color, $opacity) $gap, comma);
+		}
+
+		@if $i >= 1 and $i < $length {
+			$stripes: append($stripes, rgba($color, $opacity) calc(#{$stripe} - #{$gap}), comma);
+			$stripes: append($stripes, rgba($color, 0) calc(#{$stripe} - #{$gap}), comma);
+			$stripes: append($stripes, rgba($color, 0) calc(#{$stripe} + #{$gap}), comma);
+			$stripes: append($stripes, rgba($color, $opacity) calc(#{$stripe} + #{$gap}), comma);
+		}
+
+		@if $i == $length {
+			$stripes: append($stripes, rgba($color, $opacity) calc(#{$stripe} - #{$gap}), comma);
+			$stripes: append($stripes, rgba($color, 0) calc(#{$stripe} - #{$gap}), comma);
+			$stripes: append($stripes, rgba($color, 0) $stripe, comma);
+		}
+	  }
+	  
+	  background-image: linear-gradient($direction, $stripes);
+	} @else if $length == 1 {
+	  background-color: $color;
+	}
+}

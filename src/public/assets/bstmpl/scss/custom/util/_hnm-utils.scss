@@ -1,0 +1,76 @@
+.no-link-deco {
+    &,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@if($custom-ul-enabled) {
+    .ci-cke ul,
+    .bstmpl-cke ul,
+    ul.hai-list {
+        list-style: none;
+        padding-left: 0;
+
+        > li {
+            position: relative;
+            padding-left: 1em;
+        }
+
+        > li:before {
+            content: $ul-icon-line;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: inherit;
+            font-size: inherit;
+            float: left;
+            display: block;
+        }
+    }
+}
+
+
+@if (false) {
+    @include media-breakpoint-up(sm) {
+        .hnm-list-2-col {
+            columns: 2;
+        }
+    }
+}
+
+@if ($responsive-initializer-enabled) {
+    .hnm-visible-xs,
+    .hnm-visible-sm,
+    .hnm-visible-md,
+    .hnm-visible-lg,
+    .hnm-visible-xl {
+        display: none;
+    }
+
+    @include media-breakpoint-only(xs) {
+        .hnm-visible-xs {
+            display: block;
+        }
+    }
+    @include media-breakpoint-only(sm) {
+        .hnm-visible-sm {
+            display: block;
+        }
+    }
+    @include media-breakpoint-only(md) {
+        .hnm-visible-md {
+            display: block;
+        }
+    }
+    @include media-breakpoint-only(lg) {
+        .hnm-visible-lg {
+            display: block;
+        }
+    }
+    @include media-breakpoint-only(xl) {
+        .hnm-visible-xl {
+            display: block;
+        }
+    }
+}

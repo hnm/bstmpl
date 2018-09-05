@@ -1,0 +1,45 @@
+{
+    "types": {
+        "bstmpl-start-page-controller": {
+            "nature": "entity",
+            "entity": "bstmpl\\bo\\StartPageController",
+            "dataSourceName": null,
+            "label": "Startseite",
+            "pluralLabel": "Startseiten",
+            "iconType": "fa fa-home",
+            "fields": [],
+            "commands": [],
+            "partialControlOrder": [],
+            "overallControlOrder": [],
+            "entryControlOrder": []
+        },
+        "bstmpl-default-page-controller": {
+            "nature": "entity",
+            "entity": "bstmpl\\bo\\DefaultPageController",
+            "dataSourceName": null,
+            "label": "Standardseite",
+            "pluralLabel": "Standardseiten",
+            "iconType": null,
+            "fields": [],
+            "commands": [],
+            "partialControlOrder": [],
+            "overallControlOrder": [],
+            "entryControlOrder": []
+        },
+        "bstmpl-contact-page-controller": {
+            "nature": "entity",
+            "entity": "bstmpl\\bo\\ContactPageController",
+            "dataSourceName": null,
+            "label": "Kontakt",
+            "pluralLabel": "Kontakt",
+            "iconType": null,
+            "fields": [],
+            "commands": [],
+            "partialControlOrder": [],
+            "overallControlOrder": [],
+            "entryControlOrder": []
+        }
+    },
+    "eiTypeExtensions": [],
+    "launchPads": []
+}

@@ -1,0 +1,54 @@
+@mixin font-face-web-timestamp($familyName, $path, $timestamp, $font-weight, $font-style) {
+      font-family: #{$familyName};
+      src:    url('#{$path}.eot?#{$timestamp}');
+      src:    url('#{$path}.eot?#{$timestamp}#iefix') format('embedded-opentype'),
+          url('#{$path}.ttf?#{$timestamp}') format('truetype'),
+          url('#{$path}.woff?#{$timestamp}') format('woff'),
+          url('#{$path}.svg?#{$timestamp}') format('svg');
+      font-weight: #{$font-weight};
+      font-style: #{$font-style};
+}
+
+@mixin font-face-web($familyName, $path, $font-weight, $font-style, $localNameVariants: null) {
+    $localName: null;
+
+    @if (null != $localNameVariants) {
+        @each $item in $localNameVariants {
+            $localName: if($localName, $localName, '') + local(quote(#{$item}));
+            @if (null != $localName) {
+                $localName: $localName + ', ';
+            }
+        }
+    }
+    font-family: #{$familyName};
+    src:    url('#{$path}.eot');
+    src: if(null != $localName, unquote($localName), null)
+        url('#{$path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$path}.ttf?') format('truetype'),
+        url('#{$path}.woff?') format('woff'),
+        url('#{$path}.svg?') format('svg');
+    font-weight: #{$font-weight};
+    font-style: #{$font-style};
+}
+
+@mixin font-face-web-modern($familyName, $path, $font-weight, $font-style, $localNameVariants: null) {
+    $localName: null;
+
+    @if (null != $localNameVariants) {
+        @each $item in $localNameVariants {
+            $localName: if($localName, $localName, '') + local(quote(#{$item}));
+            @if (null != $localName) {
+                $localName: $localName + ', ';
+            }
+        }
+    }
+
+    font-family: #{$familyName};
+    src: if(null != $localName, unquote($localName), null)
+          url(#{$path}.woff2) format("woff2"),
+          url(#{$path}.woff) format("woff");
+    font-weight: #{$font-weight};
+    font-style: #{$font-style};
+}
+
+

@@ -1,0 +1,48 @@
+@if ($search-enabled) {
+	.search-result-box {
+		display: none;
+	}
+
+	.search-result-header {
+		padding: 15px;
+		border-bottom: 1px solid #EEEEEE;
+	}
+
+	.search-result-list {
+		margin: 0px;
+		padding: 0;
+		list-style: none;
+	}
+	
+	.search-no-results-fallback {
+		display: block;
+	}
+	
+	* + .search-no-results-fallback {
+		margin-top: $grid-gutter-width;
+	}
+
+	.search-result-list li {
+		padding: 20px 0;
+	}
+	
+	.search-result-list li:not(:last-child) {
+		border-bottom: 1px solid #CCCCCC;
+	}
+
+	.search-result-list li > *:last-child {
+		margin-bottom: 0;
+	}
+
+	.search-entry-title {
+		margin-bottom: 5px;
+	}
+
+	.search-entry-title > a {
+		text-decoration: none;
+	}
+
+	.search-result-close {
+		cursor: pointer;
+	}
+}

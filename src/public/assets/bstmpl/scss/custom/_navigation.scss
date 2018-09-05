@@ -1,0 +1,70 @@
+#globalnavi_toggle {
+	display: block;
+	padding: 7px;
+	border: 1px solid $white;
+	width: 34px;
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	background: $primary
+}
+
+#globalnavi_toggle span {
+	background-color: $white;
+	display: block;
+	height: 2px;
+	width: 18px;
+	margin-top: 2px;
+}
+
+#globalnavi_toggle span:first-child {
+	margin-top: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  #globalnavi {
+		//display: none;
+		border-bottom: 1px solid color("c");
+	}
+}
+@include media-breakpoint-up(md) {
+	#globalnavi_toggle {
+		display: none;
+	}
+
+	#globalnavi {
+		display: block !important;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.container #globalnavi {
+		margin-left: -$nav-link-padding-x;
+	}
+}
+
+.priority-nav {
+	a {
+		padding: 20px 35px;
+		display: block;
+	}
+
+}
+
+.navbar-expand {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+	  $next: breakpoint-next($breakpoint, $grid-breakpoints);
+	  $infix: breakpoint-infix($next, $grid-breakpoints);
+  
+	  &#{$infix} {
+  
+		@include media-breakpoint-up($next) {
+  		  .navbar-nav {
+  			.nav-link {
+			  padding-right: $nav-link-padding-x;
+			  padding-left: $nav-link-padding-x;
+			}
+		  }
+		}
+	  }
+	}
+	}

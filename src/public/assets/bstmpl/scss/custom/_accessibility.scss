@@ -1,0 +1,41 @@
+/*
+ *	A C C E S S A B I L I T Y
+ */
+ .skiplinks {
+ 	margin-bottom: 0;
+ }
+.skiplinks,
+.skiplinks li {
+	display: inline;
+	height: 0px;
+	line-height:0;
+	padding:0 !important;
+}
+
+.skiplinks li a {
+	display: inline;
+	height: 0px;
+	left: -3000px;
+	position: absolute;
+	top: -2000px;
+	width: 0px;
+	background: white;
+}
+
+.skiplinks li a img {
+	display: none;
+}
+
+.skiplinks li a:active,
+.skiplinks li a:focus {
+	position: absolute;
+	width: auto;
+	top: 70px;
+	left: 0;
+	line-height: 1.5em;
+	padding: 5px;
+	font-weight: bold;
+	height: auto;
+	z-index: 30000;
+	color: $body-color;
+}
