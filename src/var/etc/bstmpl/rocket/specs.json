@@ -32,7 +32,7 @@
             "dataSourceName": null,
             "label": "Kontakt",
             "pluralLabel": "Kontakt",
-            "iconType": null,
+            "iconType": "fa fa-comments",
             "fields": [],
             "commands": [],
             "partialControlOrder": [],
