@@ -1,5 +1,4 @@
 <?php
-	use css\model\color\Color;
 	use n2n\impl\web\ui\view\html\HtmlView;
 
 	$view = HtmlView::view($view);
