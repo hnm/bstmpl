@@ -85,14 +85,14 @@
 	text-align: center;
 }
 
-.ci-image-r > figure {
-	float: right;
-}
-
 @include media-breakpoint-up(md) {
+	.ci-image-r > figure {
+		float: right;
+	}
+
 	.ci-image-portrait {
 		> figure {
-			width: 100% * $image-format;
+			width: 100% * (1 / $ci-image-aspect-ratio);
 		}
 	}
 
@@ -106,15 +106,7 @@
 	.ci-image-l > figure,
 	.ci-image-c > figure,
 	.ci-image-r > figure {
-		width: $image-factor;
-	}
-
-	.ci-image-portrait {
-		&.ci-image-l > figure,
-		&.ci-image-c > figure,
-		&.ci-image-r > figure {
-			width: $image-factor * $image-format;
-		}
+		width: $ci-image-alignment-applied-width;
 	}
 }
 
