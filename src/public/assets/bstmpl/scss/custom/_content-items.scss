@@ -1,0 +1,100 @@
+//  Content Items 
+//  ==========================
+
+
+//  Global Style
+//  ==========================
+.ci-item,
+.ci-item-nested {
+	margin-top: $content-margin;
+	margin-bottom: $content-margin;
+}
+
+//  CI-Anchor
+//  ==========================
+.ci-anchors {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.ci-anchor:not(:last-child) {
+	margin-right: 10px;
+}
+
+
+//  ci-accordion
+//  ==========================
+
+.ci-accordion__head {
+	background: $primary;
+	color: color-yiq($primary);
+	padding: $padding-accordion-y $padding-accordion-x;
+	display: flex;
+	border-radius: $border-radius;
+}
+
+.ci-accordion__head:focus,
+.ci-accordion__head:hover {
+	cursor: pointer;
+	background: darken($primary, 10);
+}
+
+.ci-accordion__body  > :last-child,
+.ci-accordion__body  > .ci-cke > :last-child {
+	margin-bottom: 0;
+}
+
+.js .ci-accordion__body {
+	display: none;
+	border-width: 1px;
+	border-style: solid;
+	border-color: $primary;
+	padding: $content-padding;
+	border-radius: $border-radius;
+}
+
+.ci-accordion__icon {
+	border: solid color-yiq($primary);
+	border-width: 0 2px 2px 0;
+	height: .5rem;
+	pointer-events: none;
+	position: absolute;
+	right: 1.5em;
+	top: 50%;
+	transform: translateY(-60%) rotate(45deg);
+	width: .5rem;
+}
+
+.ci-accordion[aria-expanded="true"] .ci-accordion__icon {
+	transform: translateY(-50%) rotate(-135deg);
+}
+
+.ci-accordion[aria-expanded="true"] .ci-accordion__head {
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.ci-accordion[aria-expanded="true"] .ci-accordion__body {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+
+//  ci-article
+//  ==========================
+.ci-article-nested__title > a,
+.ci-article__title > a {
+	text-decoration: none;
+}
+.ci-article__link {
+	margin-bottom: 1rem;
+	display: inline-block;
+}
+
+@include media-breakpoint-up(sm) {
+	.ci-article__image {
+		margin-top: 0;
+	}
+}

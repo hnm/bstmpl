@@ -1,5 +1,8 @@
-$image: '../img';
-$font: '../fonts';
+@import "../../../n2nutil-bootstrap/scss/variables";
+
+$assetsPath :     '../..';
+$bstmplImagePath: '../img';
+$bstmplFontPath: '../fonts';
 
 $ci-image-alignment-applied-width:	60%;
 $ci-image-aspect-ratio: 4/3;
@@ -9,10 +12,7 @@ $search-enabled: false;
 $custom-ul-enabled: false;
 $responsive-initializer-enabled: false;
 
-// content-items - enable specific styles
-$ci-accordion-enabled: false;
-
-$zebra-bg-color:         black;
+$grid-lines-color:         black;
 
 // Logo Sizes
 // ===============
@@ -31,40 +31,18 @@ $zebra-bg-color:         black;
 //
 
 // stylelint-disable
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
 
-$grays:(
-    "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-  ) !default;
-
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
 
 $colors: (
     "blue":       $blue,
@@ -96,7 +74,7 @@ $colors: (
   "d": #ddd,
   "e": #eee,
   "f": #fff
-) !default;
+);
 
 $gray-dark:                 #383838;
 $gray:                      #515151;
@@ -111,8 +89,8 @@ $success:             $secondary;
 $info:                #4c97cb;
 $warning:             #F6A723;
 $danger:              #E32413;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$light:         $gray-100;
+$dark:          $gray-800;
 
 $theme-colors: (
   "primary":    $primary,
@@ -123,7 +101,7 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark
-) !default;
+);
 // stylelint-enable
 
 $primary-l-1:         #11768e;
@@ -137,14 +115,14 @@ $gray-devider:        #CECECE;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-caret:              true !default;
-$enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          false !default;
-$enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
-$enable-print-styles:       true !default;
+$enable-caret:              true;
+$enable-rounded:            true;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        true;
+$enable-hover-media-query:  false;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
 
 
 // Spacing
@@ -153,7 +131,7 @@ $enable-print-styles:       true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1rem !default;
+$spacer: 1rem;
 $spacers: (
   0: 0,
   1: ($spacer * .25),
@@ -161,7 +139,7 @@ $spacers: (
   3: $spacer,
   4: ($spacer * 1.5),
   5: ($spacer * 3)
-) !default;
+);
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
@@ -169,29 +147,29 @@ $sizes: (
   50: 50%,
   75: 75%,
   100: 100%
-) !default;
+);
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-bg:                   $white;
+$body-color:                $gray-900;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                theme-color("primary") !default;
-$link-decoration:           none !default;
-$link-hover-color:          darken($link-color, 15%) !default;
-$link-hover-decoration:     underline !default;
+$link-color:                theme-color("primary");
+$link-decoration:           none;
+$link-hover-color:          darken($link-color, 15%);
+$link-hover-decoration:     underline;
 
 // Paragraphs
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   1rem;
 
 
 // Grid breakpoints
@@ -205,7 +183,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px
-) !default;
+);
 
 
 
@@ -219,40 +197,46 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px
-) !default;
+);
 
 
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-columns:                12 !default;
-$grid-gutter-width:           30px !default;
+$grid-columns:                12;
+$grid-gutter-width:           30px;
 
-$common-padding:				$grid-gutter-width;
+$content-padding:				      $grid-gutter-width;
+$content-padding-sm:				  $grid-gutter-width/2;
+$content-padding-lg:				  $grid-gutter-width*2;
+
+$content-margin:              $grid-gutter-width;
+$content-margin-sm:           $grid-gutter-width/2;
+$content-margin-lg:           $grid-gutter-width*2;
 
 // Components
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:              1.5 !default;
-$line-height-sm:              1.5 !default;
+$line-height-lg:              1.5;
+$line-height-sm:              1.5;
 
-$border-width:                1px !default;
-$border-color:                $gray-200 !default;
+$border-width:                1px;
+$border-color:                $gray-200;
 
-$border-radius:               .25rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
+$border-radius:               .25rem;
+$border-radius-lg:            .3rem;
+$border-radius-sm:            .2rem;
 
-$component-active-color:      $white !default;
-$component-active-bg:         theme-color("primary") !default;
+$component-active-color:      $white;
+$component-active-bg:         theme-color("primary");
 
-$caret-width:                 .3em !default;
+$caret-width:                 .3em;
 
-$transition-base:             all .2s ease-in-out !default;
-$transition-fade:             opacity .15s linear !default;
-$transition-collapse:         height .35s ease !default;
+$transition-base:             all .2s ease-in-out;
+$transition-fade:             opacity .15s linear;
+$transition-collapse:         height .35s ease;
 
 
 // Fonts
@@ -260,52 +244,56 @@ $transition-collapse:         height .35s ease !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif:				Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-monospace:       "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:            $font-family-sans-serif;
 $font-family-icons:      		icomoon;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.25) !default;
-$font-size-sm:                ($font-size-base * .875) !default;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25);
+$font-size-sm:                ($font-size-base * .875);
 
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
 
-$font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$font-weight-base:            $font-weight-normal;
+$line-height-base:            1.5;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
 
-$headings-margin-bottom:      ($spacer / 2) !default;
-$headings-font-family:        inherit !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
+$headings-margin-bottom:      ($spacer / 2);
+$headings-font-family:        inherit;
+$headings-font-weight:        500;
+$headings-line-height:        1.2;
+$headings-color:              inherit;
 
-$display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
-$display3-size:               4.5rem !default;
-$display4-size:               3.5rem !default;
+$display1-size:               6rem;
+$display2-size:               5.5rem;
+$display3-size:               4.5rem;
+$display4-size:               3.5rem;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
-$display-line-height:         $headings-line-height !default;
+$display1-weight:             300;
+$display2-weight:             300;
+$display3-weight:             300;
+$display4-weight:             300;
+$display-line-height:         $headings-line-height;
 
-$lead-font-size:              ($font-size-base * 1.25) !default;
-$lead-font-weight:            300 !default;
+$lead-font-size:              ($font-size-base * 1.25);
+$lead-font-weight:            300;
 
-$small-font-size:             80% !default;
+$small-font-size:             80%;
+
+$padding-accordion-y:         $input-btn-padding-y;
+$padding-accordion-x:         $input-btn-padding-x;
+
 
 $ul-icon-line:                 "•";
 

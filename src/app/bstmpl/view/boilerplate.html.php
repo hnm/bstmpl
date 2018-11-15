@@ -101,21 +101,21 @@
 			<?php endif ?>
 		</ul>
 		<header id="page-header">
-			<div class="<?php $html->out($containerClass) ?>">
+			<div class="<?php $html->out($containerClass) ?> d-flex align-items-center">
 				<div id="branding">
 					<?php $html->link($murlPageHome, $html->getImageAsset('img/logo.png', $meta->getPageName()), null, 'div') ?>
 				</div>
+				<a id="mobile-navi-toggle" role="button" class="ml-auto">
+					<span class="mobile-navi-bar"></span>
+					<span class="mobile-navi-bar"></span>
+					<span class="mobile-navi-bar"></span>
+				</a>
 			</div>
 		</header>
 		<div id="navigation">
 			<div class="<?php $html->out($containerClass) ?>">
 				<?php if (null !== $view->buildUrl(MurlPage::home(), false)): ?>
-					<a id="globalnavi_toggle" role="button">
-						<span class="sidenavi-icon-bar"></span>
-						<span class="sidenavi-icon-bar"></span>
-						<span class="sidenavi-icon-bar"></span>
-					</a>
-					<nav id="globalnavi" class="navbar-nav navbar-expand-md tmpl-expanding-navi" data-toggler-ref="#globalnavi_toggle">
+					<nav id="globalnavi" class="navbar-nav navbar-expand-md expand-nav" data-toggler-ref="#mobile-navi-toggle"  data-child-toggler-class="expand-nav-child-toggler d-lg-none" data-expand-limit="level-rel-1">
 						<?php $pageHtml->navigation(Nav::home(), array('class' => 'navbar-nav'), null, array('class' => 'nav-item'), array('class' => 'nav-link')) ?>
 					</nav>
 				<?php endif ?>

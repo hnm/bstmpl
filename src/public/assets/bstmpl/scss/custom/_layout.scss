@@ -38,8 +38,8 @@ body {
 }
 
 @if ($dev-mode) {
-	.zebra {
-		@include stripes(to right, $zebra-bg-color);		
+	.grid-lines {
+		@include stripes(to right, $grid-lines-color);		
 	}
 }
 
