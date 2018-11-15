@@ -110,7 +110,7 @@
 		<div id="navigation">
 			<div class="<?php $html->out($containerClass) ?>">
 				<?php if (null !== $view->buildUrl(MurlPage::home(), false)): ?>
-					<a id="globalnavi_toggle" href="#globalnavi">
+					<a id="globalnavi_toggle" role="button">
 						<span class="sidenavi-icon-bar"></span>
 						<span class="sidenavi-icon-bar"></span>
 						<span class="sidenavi-icon-bar"></span>
