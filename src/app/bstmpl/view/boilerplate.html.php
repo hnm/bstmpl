@@ -100,9 +100,9 @@
 				<li><a href="#search" accesskey="5"><?php $html->text('access_search') ?></a></li>
 			<?php endif ?>
 		</ul>
-		<header id="page-header">
+		<header class="page-header">
 			<div class="<?php $html->out($containerClass) ?> d-flex align-items-center">
-				<div id="branding">
+				<div class="branding">
 					<?php $html->link($murlPageHome, $html->getImageAsset('img/logo.png', $meta->getPageName()), null, 'div') ?>
 				</div>
 				<a id="mobile-navi-toggle" role="button" class="ml-auto">
@@ -112,7 +112,7 @@
 				</a>
 			</div>
 		</header>
-		<div id="navigation">
+		<div class="navigation">
 			<div class="<?php $html->out($containerClass) ?>">
 				<?php if (null !== $view->buildUrl(MurlPage::home(), false)): ?>
 					<nav id="globalnavi" class="navbar-nav navbar-expand-md expand-nav" data-toggler-ref="#mobile-navi-toggle"  data-child-toggler-class="expand-nav-child-toggler d-lg-none" data-expand-limit="level-rel-1">
@@ -139,7 +139,7 @@
 			<?php $view->importPanel(BsTemplateModel::PANEL_NAME_BOTTOM) ?>
 		<?php endif ?>
 	
-		<footer id="page-footer">
+		<footer class="page-footer">
 			<div class="<?php $html->out($containerClass) ?>">
 				<div class="row">
 					<div class="col-sm-6">
