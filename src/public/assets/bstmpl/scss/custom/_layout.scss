@@ -5,12 +5,12 @@ body {
 }
 
 @if ($header-bg) {
-	#page-header {
+	.page-header {
 	  background-color: $header-bg;
 	}
 }
 @if ($nav-bg) {
-	#navigation {
+	.navigation {
 		background-color: $nav-bg;
 	}
 }
@@ -26,13 +26,13 @@ body {
 
 
 @if ($footer-bg) {
-	#page-footer {
+	.page-footer {
 	  background-color: $footer-bg;
 	  color: color-yiq($footer-bg);
 	}
 }
 
-#page-footer > div {
+.page-footer > div {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
