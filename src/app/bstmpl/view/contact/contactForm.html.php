@@ -4,7 +4,8 @@
 	use n2nutil\bootstrap\ui\Bs;
 	use bstmpl\model\ContactForm;
 	use n2n\impl\web\dispatch\ui\AriaFormHtmlBuilder;
-use page\ui\PageHtmlBuilder;
+    use page\ui\PageHtmlBuilder;
+    use ch\hnm\util\n2n\bot\ui\BotHtmlBuilder;
 
 	$view = HtmlView::view($view);
 	$formHtml = HtmlView::formHtml($view);
@@ -17,6 +18,7 @@ use page\ui\PageHtmlBuilder;
 	$pageHtml->meta()->applyMeta();
 	
 	$ariaFormHtml = new AriaFormHtmlBuilder($view);
+	$botHtml = new BotHtmlBuilder($view);
 	
 	$bsFormHtml = new BsFormHtmlBuilder($view, Bs::req()->row('col-sm-3', 'col-sm-9', 'offset-sm-3'));
 	
@@ -34,6 +36,7 @@ use page\ui\PageHtmlBuilder;
 			<?php $bsFormHtml->inputGroup('subject') ?>
 			<?php $bsFormHtml->textareaGroup('message', Bs::cAttr('rows', 6)) ?>
 			<?php $bsFormHtml->buttonSubmitGroup('send', $view->getL10nText('contact_form_submit_label')) ?>
+			<?php $botHtml->hiddenImage() ?>
 		<?php $bsFormHtml->close() ?>
 	</div>
 </div>
