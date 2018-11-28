@@ -1,5 +1,5 @@
 $icomoonId: unique-id();
-$icomoonPath: "../fonts/icomoon/icomoon";
+$icomoonPath: "{$bstmplFontPath}/icomoon/icomoon";
 
 @font-face {
   @include font-face-web-timestamp('icomoon', $icomoonPath, $icomoonId, 'normal', 'normal');

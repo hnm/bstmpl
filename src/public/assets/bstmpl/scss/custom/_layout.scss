@@ -4,13 +4,13 @@ body {
 	overflow-x: auto;
 }
 
-@if ($header-bg) {
-	#page-header {
+@if variable-exists(header-bg) {
+	.page-header {
 	  background-color: $header-bg;
 	}
 }
-@if ($nav-bg) {
-	#navigation {
+@if variable-exists(nav-bg) {
+	.navigation {
 		background-color: $nav-bg;
 	}
 }
@@ -25,21 +25,23 @@ body {
 }
 
 
-@if ($footer-bg) {
-	#page-footer {
+@if variable-exists(footer-bg) {
+	.page-footer {
 	  background-color: $footer-bg;
 	  color: color-yiq($footer-bg);
 	}
 }
 
-#page-footer > div {
+.page-footer > div {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-@if ($dev-mode) {
-	.zebra {
-		@include stripes(to right, $zebra-bg-color);		
+@if variable-exists(dev-mode) {
+	@if ($dev-mode) {
+		.grid-lines {
+			@include stripes(to right, $grid-lines-color);		
+		}
 	}
 }
 
@@ -74,39 +76,41 @@ body {
 
 // END FLEX is conflitcting with TABLES and OTHER THINGS (FancyBox)
 
-@if ($dev-mode) {
-	body::after {
-		content: "xs";
-		position: fixed;
-		font-size: $font-size-sm;
-		bottom: 8px;
-		right: 8px;
-		background: rgba(0,0,0,0.7);
-		height: 25px;
-		width: 25px;
-		text-align: center;
-		color: white;
-		z-index: 10000;
-	}
+@if variable-exists(dev-mode) {
+	@if ($dev-mode) {
+		body::after {
+			content: "xs";
+			position: fixed;
+			font-size: $font-size-sm;
+			bottom: 8px;
+			right: 8px;
+			background: rgba(0,0,0,0.7);
+			height: 25px;
+			width: 25px;
+			text-align: center;
+			color: white;
+			z-index: 10000;
+		}
 
-	@include media-breakpoint-only(sm) {
-		body::after {
-			content: "sm";
+		@include media-breakpoint-only(sm) {
+			body::after {
+				content: "sm";
+			}
 		}
-	}
-	@include media-breakpoint-only(md) {
-		body::after {
-			content: "md";
+		@include media-breakpoint-only(md) {
+			body::after {
+				content: "md";
+			}
 		}
-	}
-	@include media-breakpoint-only(lg) {
-		body::after {
-			content: "lg";
+		@include media-breakpoint-only(lg) {
+			body::after {
+				content: "lg";
+			}
 		}
-	}
-	@include media-breakpoint-only(xl) {
-		body::after {
-			content: "xl";
+		@include media-breakpoint-only(xl) {
+			body::after {
+				content: "xl";
+			}
 		}
 	}
 }
