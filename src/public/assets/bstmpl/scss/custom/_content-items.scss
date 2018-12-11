@@ -4,6 +4,7 @@
 
 //  Global Style
 //  ==========================
+
 .ci-item,
 .ci-item-nested {
 	margin-top: $content-margin;
@@ -12,6 +13,7 @@
 
 //  CI-Anchor
 //  ==========================
+
 .ci-anchors {
 	display: flex;
 	justify-content: center;
@@ -84,6 +86,7 @@
 
 //  ci-article
 //  ==========================
+
 .ci-article-nested__title > a,
 .ci-article__title > a {
 	text-decoration: none;
@@ -96,5 +99,32 @@
 @include media-breakpoint-up(sm) {
 	.ci-article__image {
 		margin-top: 0;
+	}
+}
+
+
+//  ci-two-cols
+//  ==========================
+.ci-2-col,
+.ci-3-col {
+	margin-top: $content-margin;
+	margin-bottom: $content-margin;
+}
+
+.ci-2-col .ci-item-nested:not(:only-child):first-child,
+.ci-3-col .ci-item-nested:not(:only-child):first-child {
+	margin-top: 0;
+}
+
+.ci-2-col .ci-item-nested:not(:only-child):last-child,
+.ci-3-col .ci-item-nested:not(:only-child):last-child {
+	margin-bottom: 0;
+}
+
+@include media-breakpoint-up(md) {
+	.ci-2-col .ci-item-nested:only-child,
+	.ci-3-col .ci-item-nested:only-child {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 }
