@@ -77,7 +77,7 @@
 	// 		var htmlElement = document.querySelectorAll("html")[0];
 	// 		htmlElement.className = htmlElement.className.replace("no-js", "js");
 	// 	})()');
-// 	$meta->addJSCode('!function(){var a=document.querySelectorAll("html")[0];a.className=a.className.replace("no-js","js")}();');
+	$meta->addJSCode('!function(){var a=document.querySelectorAll("html")[0];a.className=a.className.replace("no-js","js")}();');
 	?>
 <!doctype html>
 <html class="no-js" lang="<?php $html->out($view->getN2nLocale()->getLanguageId()) ?>">

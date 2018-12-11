@@ -1,4 +1,8 @@
 @if ($search-enabled) {
+	#search form {
+		margin-bottom: 0;
+	}
+
 	.search-result-box {
 		display: none;
 	}

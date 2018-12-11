@@ -1,3 +1,6 @@
+//  Toggler (Mobile - Hamburger)
+//  ==========================
+
 #mobile-navi-toggle {
 	margin-left: 30px;
 	text-decoration: none;
@@ -17,7 +20,6 @@
 	transition: $transition-base;
 	transition-property: transform, width, top, left, opacity;
 }
-
 
 .mobile-navi-bar:nth-child(1) {
 	top: 0px;
@@ -58,39 +60,26 @@
 	transform: rotate(-45deg);
 }
 
-@include media-breakpoint-down(sm) {
-  #globalnavi {
-		//display: none;
-		border-bottom: 1px solid color("c");
-	}
-}
 @include media-breakpoint-up(md) {
 	#mobile-navi-toggle {
 		display: none;
 	}
+}
 
+
+//  Navigation
+//  ==========================
+
+@if variable-exists(nav-bg) {
+	.navigation {
+		background-color: $nav-bg;
+	}
+}
+
+@include media-breakpoint-up(md) {
 	#globalnavi {
 		display: block !important;
 		padding-left: 0;
 		padding-right: 0;
 	}
 }
-
-.navbar-expand {
-	@each $breakpoint in map-keys($grid-breakpoints) {
-	  $next: breakpoint-next($breakpoint, $grid-breakpoints);
-	  $infix: breakpoint-infix($next, $grid-breakpoints);
-  
-	  &#{$infix} {
-  
-		@include media-breakpoint-up($next) {
-  		  .navbar-nav {
-  			.nav-link {
-			  padding-right: $nav-link-padding-x;
-			  padding-left: $nav-link-padding-x;
-			}
-		  }
-		}
-	  }
-	}
-	}

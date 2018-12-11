@@ -47,17 +47,14 @@
 
 
 // Customs
-@import "../../n2nutil-bootstrap/scss/custom/mixins";
-@import "../../n2nutil-bootstrap/scss/custom/forms";
-@import "../../n2nutil-bootstrap/scss/custom/utilities";
-
-@import "custom/browserBugFixes";
+@import "custom/util/browserBugFixes";
 
 @import 'custom/mixins';
-@import "custom/accessibility";
+@import "custom/util/accessibility";
 //@import "custom/util/fyling-focus";
-@import "custom/icomoon";
+@import "custom/icomoon/icomoon";
 @import "custom/layout";
+@import "custom/util/dev-helper";
 @import "custom/navigation";
 // @import "custom/util/fancyBox2";
 @import "custom/content-items";
