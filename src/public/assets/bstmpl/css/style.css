@@ -7017,8 +7017,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: icomoon;
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u87d74189");
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u87d74189#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?u87d74189") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?u87d74189") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?u87d74189") format("svg");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u0a230005");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u0a230005#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?u0a230005") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?u0a230005") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?u0a230005") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -7232,8 +7232,8 @@ body {
 }
 
 .ci-accordion__head {
-  background: #ed8207;
-  color: #fff;
+  background: #dee2e6;
+  color: #212529;
   padding: 0.375rem 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7244,7 +7244,7 @@ body {
 .ci-accordion__head:focus,
 .ci-accordion__head:hover {
   cursor: pointer;
-  background: #bb6706;
+  background: #c1c9d0;
 }
 
 .ci-accordion__body > :first-child,
@@ -7261,13 +7261,13 @@ body {
   display: none;
   border-width: 1px;
   border-style: solid;
-  border-color: #ed8207;
+  border-color: #dee2e6;
   padding: 30px;
   border-radius: 0.25rem;
 }
 
 .ci-accordion__icon {
-  border: solid #fff;
+  border: solid #212529;
   border-width: 0 2px 2px 0;
   height: .5rem;
   pointer-events: none;
@@ -7344,7 +7344,7 @@ abbr[data-original-title] {
 }
 
 .box {
-  background: #515151;
+  background: #495057;
 }
 
 a {

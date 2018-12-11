@@ -31,9 +31,9 @@
 //  ==========================
 
 .ci-accordion__head {
-	background: $primary;
-	color: color-yiq($primary);
-	padding: $padding-accordion-y $padding-accordion-x;
+	background: $accordion-bg;
+	color: color-yiq($accordion-bg);
+	padding: $accordion-padding-y $accordion-padding-x;
 	display: flex;
 	border-radius: $border-radius;
 }
@@ -41,7 +41,7 @@
 .ci-accordion__head:focus,
 .ci-accordion__head:hover {
 	cursor: pointer;
-	background: darken($primary, 10);
+	background: darken($accordion-bg, 10);
 }
 
 .ci-accordion__body  > :first-child,
@@ -58,13 +58,13 @@
 	display: none;
 	border-width: 1px;
 	border-style: solid;
-	border-color: $primary;
+	border-color: $accordion-border-color;
 	padding: $content-padding;
 	border-radius: $border-radius;
 }
 
 .ci-accordion__icon {
-	border: solid color-yiq($primary);
+	border: solid color-yiq($accordion-bg);
 	border-width: 0 2px 2px 0;
 	height: .5rem;
 	pointer-events: none;

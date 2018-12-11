@@ -60,30 +60,14 @@ $colors: (
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800,
-  "0": #000,
-  "1": #111,
-  "2": #222,
-  "3": #333,
-  "4": #444,
-  "5": #555,
-  "6": #666,
-  "7": #777,
-  "8": #888,
-  "9": #999,
-  "a": #aaa,
-  "b": #bbb,
-  "c": #ccc,
-  "d": #ddd,
-  "e": #eee,
-  "f": #fff
+  "gray-dark":  $gray-800
 );
 
-$gray-dark:                 #383838;
-$gray:                      #515151;
-$gray-light:                #8C8C8C;
-$gray-lighter:              #EBEBEB;
-$gray-lightest:             #F5F5F5;
+$gray-dark:                 $gray-800;
+$gray:                      $gray-700;
+$gray-light:                $gray-600;
+$gray-lighter:              $gray-400;
+$gray-lightest:             $gray-100;
 
 
 $primary:             #ed8207;
@@ -92,8 +76,8 @@ $success:             $secondary;
 $info:                #4c97cb;
 $warning:             #F6A723;
 $danger:              #E32413;
-$light:         $gray-100;
-$dark:          $gray-800;
+$light:         		$gray-100;
+$dark:          		$gray-800;
 
 $theme-colors: (
   "primary":    $primary,
@@ -107,12 +91,12 @@ $theme-colors: (
 );
 // stylelint-enable
 
-$primary-l-1:         #11768e;
-$primary-d-1:         #194D70;
-$secondary-d-1:       #5E9719;
+$primary-l-1:         mix(white, $primary, 10);
+$primary-d-1:         mix(black, $primary, 10);
+$secondary-d-1:       mix(black, $secondary, 10);
 
 
-$gray-devider:        #CECECE;
+$gray-devider:        $gray-500;
 
 // Options
 //
@@ -294,8 +278,11 @@ $lead-font-weight:            300;
 
 $small-font-size:             80%;
 
-$padding-accordion-y:         $input-btn-padding-y;
-$padding-accordion-x:         $input-btn-padding-x;
+$accordion-padding-y:         $input-btn-padding-y;
+$accordion-padding-x:         $input-btn-padding-x;
+
+$accordion-bg:				$gray-300;
+$accordion-border-color:	$accordion-bg;
 
 
 $ul-icon-line:                 "•";

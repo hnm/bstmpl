@@ -43,6 +43,7 @@
 				<?php if (false !== $title): ?>
 					<h1 <?php $view->out($showTitle === false ? ' class="sr-only"'  : '') ?>><?php $pageHtml->title($title) ?></h1>
 				<?php endif ?>
+				
 				<?php $view->importContentView() ?>
 			</div>
 			<?php if ($view->hasPanel(BsTemplateModel::PANEL_NAME_RIGHT)): ?>
