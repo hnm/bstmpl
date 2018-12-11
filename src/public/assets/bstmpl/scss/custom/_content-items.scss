@@ -44,6 +44,11 @@
 	background: darken($primary, 10);
 }
 
+.ci-accordion__body  > :first-child,
+.ci-accordion__body  > .ci-cke > :first-child {
+	margin-top: 0;
+}
+
 .ci-accordion__body  > :last-child,
 .ci-accordion__body  > .ci-cke > :last-child {
 	margin-bottom: 0;
