@@ -7017,8 +7017,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: icomoon;
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u29a854d6");
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u29a854d6#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?u29a854d6") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?u29a854d6") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?u29a854d6") format("svg");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?uc13c0102");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?uc13c0102#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?uc13c0102") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?uc13c0102") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?uc13c0102") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -7432,4 +7432,162 @@ a {
     width: 100%;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+.bd-example {
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  border: solid #f8f9fa;
+  border-width: .2rem;
+}
+
+.swatch-blue {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.swatch-indigo {
+  color: #fff;
+  background-color: #6610f2;
+}
+
+.swatch-purple {
+  color: #fff;
+  background-color: #6f42c1;
+}
+
+.swatch-pink {
+  color: #fff;
+  background-color: #e83e8c;
+}
+
+.swatch-red {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.swatch-orange {
+  color: #212529;
+  background-color: #fd7e14;
+}
+
+.swatch-yellow {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.swatch-green {
+  color: #fff;
+  background-color: #28a745;
+}
+
+.swatch-teal {
+  color: #fff;
+  background-color: #20c997;
+}
+
+.swatch-cyan {
+  color: #fff;
+  background-color: #17a2b8;
+}
+
+.swatch-white {
+  color: #212529;
+  background-color: #fff;
+}
+
+.swatch-gray {
+  color: #fff;
+  background-color: #868e96;
+}
+
+.swatch-gray-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.swatch-primary {
+  color: #fff;
+  background-color: #ed8207;
+}
+
+.swatch-secondary {
+  color: #212529;
+  background-color: #97BF38;
+}
+
+.swatch-success {
+  color: #212529;
+  background-color: #97BF38;
+}
+
+.swatch-info {
+  color: #fff;
+  background-color: #4c97cb;
+}
+
+.swatch-warning {
+  color: #212529;
+  background-color: #F6A723;
+}
+
+.swatch-danger {
+  color: #fff;
+  background-color: #E32413;
+}
+
+.swatch-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+.swatch-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.swatch-100 {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+.swatch-200 {
+  color: #212529;
+  background-color: #e9ecef;
+}
+
+.swatch-300 {
+  color: #212529;
+  background-color: #dee2e6;
+}
+
+.swatch-400 {
+  color: #212529;
+  background-color: #ced4da;
+}
+
+.swatch-500 {
+  color: #212529;
+  background-color: #adb5bd;
+}
+
+.swatch-600 {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.swatch-700 {
+  color: #fff;
+  background-color: #495057;
+}
+
+.swatch-800 {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.swatch-900 {
+  color: #fff;
+  background-color: #212529;
+}
+/*# sourceMappingURL=style-layout.css.map */

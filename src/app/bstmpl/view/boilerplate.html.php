@@ -16,6 +16,7 @@
 	
 	$fluid = $view->getParam('fluid', false, false);
 	$containerClass = $fluid ? 'container-fluid' : 'container';
+	$cssFileName = $view->getParam('cssFileName', false, 'style');
 	
 	$pageHtml = new PageHtmlBuilder($view);
 	$pageMeta = $pageHtml->meta();
@@ -51,7 +52,7 @@
 	//$meta->addJs('js/modernizr.js');
 	$meta->addLibrary(new JQueryLibrary(3));
 	$meta->addLibrary(new BootstrapLibrary(false, false));
-	$meta->addCss('css/style.css?v=' . (new DateTime())->format('YmdHis'));
+	$meta->addCss('css/' . $cssFileName . '.css?v=' . (new DateTime())->format('YmdHis'));
 //	$meta->bodyEnd()->addJs('js/jquery.stickyPanel.js');
 //	$meta->bodyEnd()->addJs('js/responsive-initializer.js');
 // 	$meta->bodyEnd()->addJs('js/flying-focus.js');

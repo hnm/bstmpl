@@ -4,7 +4,7 @@
 	$view = HtmlView::view($view);
 	$html = HtmlView::html($view);
 
-	$view->useTemplate('~\view\bsTemplate.html', array('title' => 'Layout Tests'));
+	$view->useTemplate('~\view\bsTemplate.html', ['title' => 'Layout Tests']);
 ?>
 
 <ul>
