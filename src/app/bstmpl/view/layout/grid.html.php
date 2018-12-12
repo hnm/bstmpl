@@ -4,7 +4,10 @@
 	$view = HtmlView::view($view);
 	$html = HtmlView::html($view);
 	
-	$view->useTemplate('~\view\boilerplate.html', ['cssFileName' => 'style-layout']);
+	$html->meta()->addCss('css/example-layout.css');
+	
+	$view->useTemplate('~\view\boilerplate.html');
+	
 	
 ?>
 

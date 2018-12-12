@@ -9,11 +9,10 @@
 	$title = $view->getParam('title', false);
 	$showTitle = $view->getParam('showTitle', false);
 	$fluid = $view->getParam('fluid', false, false);
-	$cssFileName = $view->getParam('cssFileName', false, 'style');
 
 	$pageHtml = new PageHtmlBuilder($view);
 	
-	$view->useTemplate('boilerplate.html', array('fluid' => $fluid, 'cssFileName' => $cssFileName));
+	$view->useTemplate('boilerplate.html', array('fluid' => $fluid));
 	
 	$classNameMainContent = null;
 	
