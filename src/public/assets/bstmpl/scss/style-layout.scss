@@ -8,6 +8,13 @@
 	border-width: .2rem;
 }
 
+.bd-example-row .row > .col, .bd-example-row .row > [class^="col-"] {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	background-color: rgba($gray-700,.15);
+	border: 1px solid rgba($gray-700,.2);
+}
+
 @each $color, $value in $colors {
 	.swatch-#{$color} {
 	  color: color-yiq($value);
