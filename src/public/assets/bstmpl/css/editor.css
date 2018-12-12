@@ -6595,8 +6595,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: icomoon;
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u59c2aa8a");
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?u59c2aa8a#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?u59c2aa8a") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?u59c2aa8a") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?u59c2aa8a") format("svg");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?ua1f331b8");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?ua1f331b8#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?ua1f331b8") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?ua1f331b8") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?ua1f331b8") format("svg");
   font-weight: normal;
   font-style: normal;
 }

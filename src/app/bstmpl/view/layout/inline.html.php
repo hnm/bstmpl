@@ -524,6 +524,37 @@
 		</div>
 		
 		<div class="col-sm-6">
+			<h3>table - dark mode</h3>
+			<p>Example of a table with <code>.table .table-dark</code>.</p>
+			<table class="table table-dark">
+				<thead>
+					<tr>
+						<th>Version</th>
+						<th>Description</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="3">Try now!</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>n2n free</td>
+						<td>Free for non-commercial use</td>
+						<td>FREE!</td>
+					</tr>
+					<tr>
+						<td>n2n pro</td>
+						<td>Use for whatever you like! lifetime version!</td>
+						<td>CHF 700.-</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="col-sm-6">
 			<h3>This is a striped table</h3>
 			<p>Example of a <code>.table-striped</code> table.</p>
 			<table class="table table-striped">
@@ -588,8 +619,8 @@
 		
 		<div class="col-sm-6">
 			<h3>A condensed table</h3>
-			<p>Example of a <code>.table-condensed</code> table. Can save some space...</p>
-			<table class="table table-condensed">
+			<p>Example of a table with <code>.table-condensed</code>. Can save some space...</p>
+			<table class="table-condensed">
 				<thead>
 					<tr>
 						<th>Version</th>
@@ -616,6 +647,156 @@
 				</tbody>
 			</table>
 		</div>
+		
+		<div class="col-sm-6">
+			<h3>Hover the table!</h3>
+			<p>Example of a table with <code>.table-hover</code>.</p>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Version</th>
+						<th>Description</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="3">Try now!</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>n2n free</td>
+						<td>Free for non-commercial use</td>
+						<td>FREE!</td>
+					</tr>
+					<tr>
+						<td>n2n pro</td>
+						<td>Use for whatever you like! lifetime version!</td>
+						<td>CHF 700.-</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="col-sm-12">
+			<h3>responsive Table</h3>
+			<p>Example of a responsive Table</p>
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Version</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="12">Try now!</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>n2n free</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>FREE!</td>
+						</tr>
+						<tr>
+							<td>n2n pro</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>CHF 700.-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<div class="col-sm-12">
+			<h3>responsive Table - Breapoint-Specific</h3>
+			<p>Example of a responsive Table</p>
+			<div class="table-responsive-lg">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Version</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Description</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="12">Try now!</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>n2n free</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>Free for non-commercial use</td>
+							<td>FREE!</td>
+						</tr>
+						<tr>
+							<td>n2n pro</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>Use for whatever you like! lifetime version!</td>
+							<td>CHF 700.-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
 	</div>
 		
 	<h3>Everything combined</h3>

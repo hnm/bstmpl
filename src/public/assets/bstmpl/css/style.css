@@ -7017,8 +7017,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: icomoon;
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?ucbbb3823");
-  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?ucbbb3823#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?ucbbb3823") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?ucbbb3823") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?ucbbb3823") format("svg");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?ub9b1ba75");
+  src: url("{$bstmplFontPath}/icomoon/icomoon.eot?ub9b1ba75#iefix") format("embedded-opentype"), url("{$bstmplFontPath}/icomoon/icomoon.ttf?ub9b1ba75") format("truetype"), url("{$bstmplFontPath}/icomoon/icomoon.woff?ub9b1ba75") format("woff"), url("{$bstmplFontPath}/icomoon/icomoon.svg?ub9b1ba75") format("svg");
   font-weight: normal;
   font-style: normal;
 }
