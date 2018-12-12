@@ -63,19 +63,27 @@ $colors: (
   "gray-dark":  $gray-800
 );
 
-$gray-dark:                 $gray-800;
-$gray:                      $gray-700;
-$gray-light:                $gray-600;
-$gray-lighter:              $gray-400;
-$gray-lightest:             $gray-100;
+$project-gray-d-200:				$gray-800;
+$project-gray-d-100:				$gray-700;
+$project-gray:						$gray-600;
+$project-gray-l-100:				$gray-400;
+$project-gray-l-200:				$gray-100;
+
+$project-grays: (
+	"project-gray-d-200": $project-gray-d-200,
+	"project-gray-d-100": $project-gray-d-100,
+	"project-gray": $project-gray,
+	"project-gray-l-100": $project-gray-l-100,
+	"project-gray-l-200": $project-gray-l-200
+);
 
 
 $primary:             #ed8207;
-$secondary:           #97BF38;
-$success:             $secondary;
-$info:                #4c97cb;
-$warning:             #F6A723;
-$danger:              #E32413;
+// $secondary:           #97BF38;
+// $success:             $secondary;
+// $info:                #4c97cb;
+// $warning:             #F6A723;
+// $danger:              #E32413;
 $light:         		$gray-100;
 $dark:          		$gray-800;
 
@@ -91,10 +99,28 @@ $theme-colors: (
 );
 // stylelint-enable
 
-$primary-l-1:         mix(white, $primary, 10);
-$primary-d-1:         mix(black, $primary, 10);
-$secondary-d-1:       mix(black, $secondary, 10);
+$primary-d-200:         mix(black, $primary, 40);
+$primary-d-100:         mix(black, $primary, 20);
+$primary-l-100:         mix(white, $primary, 20);
+$primary-l-200:         mix(white, $primary, 40);
 
+$secondary-d-200:       mix(black, $secondary, 40);
+$secondary-d-100:       mix(black, $secondary, 20);
+$secondary-l-100:       mix(white, $secondary, 20);
+$secondary-l-200:       mix(white, $secondary, 40);
+
+$project-theme-colors: (
+	"primary-d-200": $primary-d-200,
+	"primary-d-100": $primary-d-100,
+	"primary": $primary,
+	"primary-l-100": $primary-l-100,
+	"primary-l-200": $primary-l-200,
+	"secondary-d-200": $secondary-d-200,
+	"secondary-d-100": $secondary-d-100,
+	"secondary": $secondary,
+	"secondary-l-100": $secondary-l-100,
+	"secondary-l-200": $secondary-l-200,
+);
 
 $gray-devider:        $gray-500;
 

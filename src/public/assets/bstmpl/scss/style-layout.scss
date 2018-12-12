@@ -22,7 +22,33 @@
 	}
   }
   
+
+@each $color, $value in $project-theme-colors {
+	.swatch-#{$color} {
+		color: color-yiq($value);
+		background-color: #{$value};
+	}
+}
+
+
   @each $color, $value in $grays {
+	.swatch-#{$color} {
+	  color: color-yiq($value);
+	  background-color: #{$value};
+	}
+  }
+
+  .swatch-white {
+	color: color-yiq($white);
+	background-color: $white;
+  }
+
+  .swatch-black {
+	color: color-yiq($black);
+	background-color: $black;
+  }
+
+  @each $color, $value in $project-grays {
 	.swatch-#{$color} {
 	  color: color-yiq($value);
 	  background-color: #{$value};
