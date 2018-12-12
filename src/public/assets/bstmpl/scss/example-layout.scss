@@ -1,0 +1,67 @@
+// Core variables and mixins
+@import "../../n2nutil-bootstrap/scss/functions";
+@import "custom/custom";
+@import "../../n2nutil-bootstrap/scss/variables";
+@import "../../n2nutil-bootstrap/scss/mixins";
+
+.bd-example {
+	padding: 1.5rem;
+	margin-right: 0;
+	margin-left: 0;
+	border: solid #f8f9fa;
+	border-width: .2rem;
+}
+
+.bd-example-row .row > .col, .bd-example-row .row > [class^="col-"] {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	background-color: rgba($gray-700,.15);
+	border: 1px solid rgba($gray-700,.2);
+}
+
+@each $color, $value in $colors {
+	.swatch-#{$color} {
+	  color: color-yiq($value);
+	  background-color: #{$value};
+	}
+  }
+  
+  @each $color, $value in $theme-colors {
+	.swatch-#{$color} {
+	  color: color-yiq($value);
+	  background-color: #{$value};
+	}
+  }
+  
+
+@each $color, $value in $project-theme-colors {
+	.swatch-#{$color} {
+		color: color-yiq($value);
+		background-color: #{$value};
+	}
+}
+
+
+  @each $color, $value in $grays {
+	.swatch-#{$color} {
+	  color: color-yiq($value);
+	  background-color: #{$value};
+	}
+  }
+
+  .swatch-white {
+	color: color-yiq($white);
+	background-color: $white;
+  }
+
+  .swatch-black {
+	color: color-yiq($black);
+	background-color: $black;
+  }
+
+  @each $color, $value in $project-grays {
+	.swatch-#{$color} {
+	  color: color-yiq($value);
+	  background-color: #{$value};
+	}
+  }
