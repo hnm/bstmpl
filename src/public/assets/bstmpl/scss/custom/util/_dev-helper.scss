@@ -1,0 +1,43 @@
+@if variable-exists(dev-mode) {
+	@if ($dev-mode) {
+		
+		.grid-lines {
+			@include stripes(to right, $grid-lines-color);		
+		}
+
+		body::after {
+			content: "xs";
+			position: fixed;
+			font-size: $font-size-sm;
+			bottom: 8px;
+			right: 8px;
+			background: rgba(0,0,0,0.7);
+			height: 25px;
+			width: 25px;
+			text-align: center;
+			color: white;
+			z-index: 10000;
+		}
+
+		@include media-breakpoint-only(sm) {
+			body::after {
+				content: "sm";
+			}
+		}
+		@include media-breakpoint-only(md) {
+			body::after {
+				content: "md";
+			}
+		}
+		@include media-breakpoint-only(lg) {
+			body::after {
+				content: "lg";
+			}
+		}
+		@include media-breakpoint-only(xl) {
+			body::after {
+				content: "xl";
+			}
+		}
+	}
+}
