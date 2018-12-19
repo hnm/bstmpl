@@ -11,6 +11,33 @@
 	margin-bottom: $content-margin;
 }
 
+.ci-item-full-width {
+	width: 100vw;
+	position: relative;
+  }
+  
+  /* browser that support */
+  /* ie11 */
+  @media all and (-ms-high-contrast:none)
+	{
+	  *::-ms-backdrop, .ci-item-full-width{
+		left: 50%;
+		right: 50%;
+		margin-right: -50vw;
+		margin-left: -50vw;
+	}
+  }
+  
+  /* modern browsers */
+  @supports (width: 100vw)  {
+	.ci-item-full-width {
+	  left: 50%;
+	  right: 50%;
+	  margin-right: -50vw;
+	  margin-left: -50vw;
+	} 
+  }
+
 
 //  CI-Anchor
 //  ==========================
