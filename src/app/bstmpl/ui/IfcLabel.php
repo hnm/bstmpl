@@ -4,7 +4,7 @@ namespace bstmpl\ui;
 use n2n\impl\web\ui\view\html\HtmlElement;
 use n2n\impl\web\ui\view\html\HtmlSnippet;
 use n2n\impl\web\ui\view\html\HtmlUtils;
-use n2n\reflection\ArgUtils;
+use n2n\util\type\ArgUtils;
 use n2n\web\ui\UiComponent;
 
 class IfcLabel extends HtmlSnippet {
