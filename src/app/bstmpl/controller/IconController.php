@@ -11,7 +11,7 @@ class IconController extends ControllerAdapter {
 	
 	public function index(N2nContext $n2nc) {
 		
-		$scssFile = IoUtils::getContents(N2N::getPublicDirPath()->ext(array('assets', 'bstmpl', 'scss', 'custom', '_icomoon-icons.scss')));
+		$scssFile = IoUtils::getContents(N2N::getPublicDirPath()->ext(array('assets', 'bstmpl', 'scss', 'custom', 'icomoon', '_icomoon-icons.scss')));
 		$matches = [];
 		preg_match_all('/\.(ifc-.*):before/', $scssFile, $matches);
 		test($matches);
