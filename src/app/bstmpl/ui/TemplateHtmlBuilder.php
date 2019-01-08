@@ -8,6 +8,8 @@ use n2n\io\managed\File;
 use n2nutil\bootstrap\img\MimgBs;
 use n2n\impl\web\ui\view\html\img\Mimg;
 use n2n\impl\web\ui\view\html\img\ImgComposer;
+use n2n\web\ui\UiComponent;
+use n2n\util\type\CastUtils;
 class TemplateHtmlBuilder {
 	private $view;
 	private $html;
@@ -18,7 +20,7 @@ class TemplateHtmlBuilder {
 		$this->html = $view->getHtmlBuilder();
 		$this->meta = $this->html->meta();
 	}
-	public function getFancyImage(File $image = null, ImgComposer $thumbComposer = null, ImgComposer $fancyComposer = null, array $attrs = null, array $imgAttrs = null, array $fancyOptions = null) {
+	public function getFancyImage(File $image = null, ImgComposer $thumbComposer = null, ImgComposer $fancyComposer = null, array $attrs = null, array $imgAttrs = null, array $fancyOptions = null, $htmlElement = null) {
 		if ($thumbComposer === null) {
 			$thumbComposer = MimgBs::xs(Mimg::prop(497, 332))->sm(546)->md(690)->lg(910)->xl(1110);
 		}
@@ -60,11 +62,23 @@ class TemplateHtmlBuilder {
 		
 		$imgAttrs = HtmlUtils::mergeAttrs((array) $imgAttrs, array('class' => 'img-fluid'));
 		
-		return new HtmlElement('a', $attrs, $this->html->getImage($image, $thumbComposer, $imgAttrs));
+		$lyteBoxLink = new HtmlElement('a', $attrs);
+		
+		$thumbImage = $this->html->getImage($image, $thumbComposer, $imgAttrs);
+		
+		if (null !== $htmlElement) {
+			CastUtils::assertTrue($htmlElement instanceof UiComponent);
+			$htmlElement->append($thumbImage);
+			$lyteBoxLink->append($htmlElement);
+		} else {
+			$lyteBoxLink->append($thumbImage);
+		}
+		
+		return $lyteBoxLink;
 	}
 	
-	public function fancyImage(File $image = null, $thumbComposer = null, $fancyComposer = null, array $attrs = null, array $imgAttrs = null, array $fancyOptions = null) {
-		$this->view->out($this->getFancyImage($image, $thumbComposer, $fancyComposer, $attrs, $imgAttrs, $fancyOptions));
+	public function fancyImage(File $image = null, $thumbComposer = null, $fancyComposer = null, array $attrs = null, array $imgAttrs = null, array $fancyOptions = null, $htmlElement = null) {
+		$this->view->out($this->getFancyImage($image, $thumbComposer, $fancyComposer, $attrs, $imgAttrs, $fancyOptions, $htmlElement));
 	}
 	
 	

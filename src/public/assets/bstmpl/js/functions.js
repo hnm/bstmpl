@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
 		var ResponsiveBgImage = function(jqElem) {
 			this.jqElem = jqElem;
 			this.jqElemImg = jqElem.find("img:first");
-			if (jqElemImg.length === 0) return; 
+			if (this.jqElemImg.length === 0) return; 
 			this.src = '';
 			
 			(function(_obj) {
@@ -95,7 +95,7 @@ jQuery(document).ready(function($) {
 				this.jqElemImg.css({
 					"display": "none"
 				});
-				_obj.jqElemImg.addEventListener('load', () => {
+				_obj.jqElemImg.on('load', () => {
 					_obj.update();
 				});
 					
@@ -107,7 +107,9 @@ jQuery(document).ready(function($) {
 		};
 		
 		ResponsiveBgImage.prototype.update = function() {
-			let src = typeof this.img.currentSrc !== 'undefined' ? this.img.currentSrc : this.img.src;
+			
+			
+			var src = typeof this.jqElemImg.prop('currentSrc') !== 'undefined' ? this.jqElemImg.prop('currentSrc') : this.jqElemImg.prop('src');
 	        if (this.src !== src) {
 	            this.src = src;
 	            this.jqElem.css({
