@@ -72,6 +72,57 @@ jQuery(document).ready(function($) {
     })();
 	
 	
+	(function() {
+		
+		var jqElemsResponsiveBgImages = $('.cover-bg-image');
+		if (jqElemsResponsiveBgImages.length === 0) return;
+		
+		var ResponsiveBgImage = function(jqElem) {
+			this.jqElem = jqElem;
+			this.jqElemImg = jqElem.find("img:first");
+			if (jqElemImg.length === 0) return; 
+			this.src = '';
+			
+			(function(_obj) {
+				this.jqElem.css({
+					"background-color": "green",
+					"background-size": "cover",
+					"background-position": "center center",
+					"background-repeat": "no-repeat",
+					"min-height": "200px",
+					"min-width": "200px"
+				});
+				this.jqElemImg.css({
+					"display": "none"
+				});
+				_obj.jqElemImg.addEventListener('load', () => {
+					_obj.update();
+				});
+					
+				if (_obj.jqElemImg.complete) {
+					_obj.update();
+				};
+				
+			}).call(this, this);
+		};
+		
+		ResponsiveBgImage.prototype.update = function() {
+			let src = typeof this.img.currentSrc !== 'undefined' ? this.img.currentSrc : this.img.src;
+	        if (this.src !== src) {
+	            this.src = src;
+	            this.jqElem.css({
+	            	'background-image': 'url("' + this.src + '")'
+	            	});
+            }
+		};
+		
+		jqElemsResponsiveBgImages.each(function() {
+			new ResponsiveBgImage($(this));
+			
+		});
+	})();
+	
+	
 //	(function() {
 //		var jqElemsTmplExpandingNav = $(".tmpl-expanding-navi"),
 //			jqElemHtml = $("html");
