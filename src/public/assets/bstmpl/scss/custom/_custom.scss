@@ -1,27 +1,5 @@
-@import "../../../n2nutil-bootstrap/scss/variables";
-
-$assetsPath :     '../..';
-$bstmplImagePath: '../img';
-$bstmplFontPath: '../fonts';
-
-$ci-image-alignment-applied-width:	60%;
-$ci-image-aspect-ratio: 4/3;
-
-$dev-mode:		true;
-$search-enabled: false;
-$custom-ul-enabled: false;
-$responsive-initializer-enabled: false;
-$main-container-min-height-mode-flex: true;
-
-$grid-lines-color:         black;
-
-// Logo Sizes
-// ===============
-
-// $logo-max-width:        240px;
-// $logo-max-width-small:  180px;
-$logo-error-max-width:        240px;
-$logo-error-max-width-small:  180px;
+//  bootstrap variables - default overwrite
+//  ==========================
 
 // Variables
 //
@@ -47,21 +25,27 @@ $gray-900: #212529;
 $black:    #000;
 
 
-$colors: (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
-);
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan: 	#17a2b8 !default;
+
+
+$primary:             #ed8207;
+$secondary:           #97BF38;
+// $success:             $secondary;
+// $info:                #4c97cb;
+// $warning:             #F6A723;
+// $danger:              #E32413;
+$light:         		$gray-100;
+$dark:          		$gray-800;
+
 
 $project-gray-d-200:				$gray-800;
 $project-gray-d-100:				$gray-700;
@@ -70,34 +54,12 @@ $project-gray-l-100:				$gray-400;
 $project-gray-l-200:				$gray-100;
 
 $project-grays: (
-	"project-gray-d-200": $project-gray-d-200,
-	"project-gray-d-100": $project-gray-d-100,
-	"project-gray": $project-gray,
-	"project-gray-l-100": $project-gray-l-100,
-	"project-gray-l-200": $project-gray-l-200
+	"project-gray-d-200": 	$project-gray-d-200,
+	"project-gray-d-100": 	$project-gray-d-100,
+	"project-gray": 		$project-gray,
+	"project-gray-l-100": 	$project-gray-l-100,
+	"project-gray-l-200": 	$project-gray-l-200
 );
-
-
-$primary:             #ed8207;
-// $secondary:           #97BF38;
-// $success:             $secondary;
-// $info:                #4c97cb;
-// $warning:             #F6A723;
-// $danger:              #E32413;
-$light:         		$gray-100;
-$dark:          		$gray-800;
-
-$theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-);
-// stylelint-enable
 
 $primary-d-200:         mix(black, $primary, 40);
 $primary-d-100:         mix(black, $primary, 20);
@@ -110,16 +72,16 @@ $secondary-l-100:       mix(white, $secondary, 20);
 $secondary-l-200:       mix(white, $secondary, 40);
 
 $project-theme-colors: (
-	"primary-d-200": $primary-d-200,
-	"primary-d-100": $primary-d-100,
-	"primary": $primary,
-	"primary-l-100": $primary-l-100,
-	"primary-l-200": $primary-l-200,
-	"secondary-d-200": $secondary-d-200,
-	"secondary-d-100": $secondary-d-100,
-	"secondary": $secondary,
-	"secondary-l-100": $secondary-l-100,
-	"secondary-l-200": $secondary-l-200,
+	"primary-d-200": 	$primary-d-200,
+	"primary-d-100": 	$primary-d-100,
+	"primary": 			$primary,
+	"primary-l-100": 	$primary-l-100,
+	"primary-l-200": 	$primary-l-200,
+	"secondary-d-200": 	$secondary-d-200,
+	"secondary-d-100": 	$secondary-d-100,
+	"secondary": 		$secondary,
+	"secondary-l-100": 	$secondary-l-100,
+	"secondary-l-200": 	$secondary-l-200,
 );
 
 $gray-devider:        $gray-500;
@@ -173,10 +135,12 @@ $body-color:                $gray-900;
 //
 // Style anchor elements.
 
-$link-color:                theme-color("primary");
-$link-decoration:           none;
-$link-hover-color:          darken($link-color, 15%);
-$link-hover-decoration:     underline;
+// $link-color:                theme-color("primary");
+// $link-decoration:           none;
+// $link-hover-color:          darken($link-color, 15%);
+// $link-hover-decoration:     underline;
+// // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+// $emphasized-link-hover-darken-percentage: 15% !default;
 
 // Paragraphs
 //
@@ -220,14 +184,6 @@ $container-max-widths: (
 $grid-columns:                12;
 $grid-gutter-width:           30px;
 
-$content-padding:				      $grid-gutter-width;
-$content-padding-sm:				  $grid-gutter-width/2;
-$content-padding-lg:				  $grid-gutter-width*2;
-
-$content-margin:              $grid-gutter-width;
-$content-margin-sm:           $grid-gutter-width/2;
-$content-margin-lg:           $grid-gutter-width*2;
-
 // Components
 //
 // Define common padding and border radius sizes and more.
@@ -235,17 +191,25 @@ $content-margin-lg:           $grid-gutter-width*2;
 $line-height-lg:              1.5;
 $line-height-sm:              1.5;
 
-$border-width:                1px;
-$border-color:                $gray-200;
+// $border-width:                1px;
+// $border-color:                $gray-200;
 
-$border-radius:               .25rem;
-$border-radius-lg:            .3rem;
-$border-radius-sm:            .2rem;
+// $border-radius:               0;
+// $border-radius-lg:            0;
+// $border-radius-sm:            0;
 
-$component-active-color:      $white;
-$component-active-bg:         theme-color("primary");
+// $rounded-pill:                50rem !default;
 
-$caret-width:                 .3em;
+// $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+// $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+// $box-shadow-lg: 			  0 1rem 3rem rgba($black, .175) !default;
+
+// $component-active-color:      $white;
+// $component-active-bg:         theme-color("primary");
+
+// $caret-width:                 .3em;
+// $caret-vertical-align:        $caret-width * .85 !default;
+// $caret-spacing: 				$caret-width * .85 !default;
 
 $transition-base:             all .2s ease-in-out;
 $transition-fade:             opacity .15s linear;
@@ -268,9 +232,11 @@ $font-size-base:              1rem; // Assumes the browser default, typically `1
 $font-size-lg:                ($font-size-base * 1.25);
 $font-size-sm:                ($font-size-base * .875);
 
+$font-weight-lighter:         lighter;
 $font-weight-light:           300;
 $font-weight-normal:          400;
 $font-weight-bold:            700;
+$font-weight-bolder: 		  bolder;
 
 $font-weight-base:            $font-weight-normal;
 $line-height-base:            1.5;
@@ -282,7 +248,7 @@ $h4-font-size:                $font-size-base * 1.5;
 $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
 
-$headings-margin-bottom:      ($spacer / 2);
+$headings-margin-bottom:      $spacer / 2;
 $headings-font-family:        inherit;
 $headings-font-weight:        500;
 $headings-line-height:        1.2;
@@ -299,25 +265,83 @@ $display3-weight:             300;
 $display4-weight:             300;
 $display-line-height:         $headings-line-height;
 
-$lead-font-size:              ($font-size-base * 1.25);
+$lead-font-size:              $font-size-base * 1.25;
 $lead-font-weight:            300;
 
 $small-font-size:             80%;
 
-$accordion-padding-y:         $input-btn-padding-y;
-$accordion-padding-x:         $input-btn-padding-x;
 
-$accordion-bg:				$gray-300;
-$accordion-border-color:	$accordion-bg;
+@import "../../../n2nutil-bootstrap/scss/variables";
 
 
-$ul-icon-line:                 "•";
+//  N2N variables
+//  ==========================
+
+//  Flags
+//  ==========================
+
+$dev-mode:		true;
+$search-enabled: false;
+$custom-ul-enabled: false;
+$responsive-initializer-enabled: false;
+$main-container-min-height-mode-flex: true;
+
+
+//  Css common paths
+//  ==========================
+
+$assetsPath :     '../..';
+$bstmplImagePath: '../img';
+$bstmplFontPath: '../fonts';
+
+
+//  Css image aspect-ratios (delete if no more neccassery)
+//  ==========================
+
+$ci-image-alignment-applied-width:	60%;
+$ci-image-aspect-ratio: 4/3;
+
+
+//  Grid lines
+//  ==========================
+
+$grid-lines-color:         black;
+
+
+// Logo sizes
+// ===============
+
+// $logo-max-width:        240px;
+// $logo-max-width-small:  180px;
+$logo-error-max-width:        240px;
+$logo-error-max-width-small:  180px;
+
+
+//  Layout (header, footer etc.)
+//  ==========================
 
 $header-bg:                 $primary;
 $footer-bg:                 null;
 $nav-bg:                    #eee;
 $exception-header-bg:       null; //$primary;
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints);
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+//  Content items common default padding 
+//  ==========================
+
+$content-padding:			$grid-gutter-width;
+$content-padding-sm:		$grid-gutter-width/2;
+$content-padding-lg:		$grid-gutter-width*2;
+
+$content-margin:            $grid-gutter-width;
+$content-margin-sm:         $grid-gutter-width/2;
+$content-margin-lg:         $grid-gutter-width*2;
+
+
+$ul-icon-line:              "•";
+
+
+$accordion-bg:				$gray-300;
+$accordion-border-color:	$accordion-bg;
+$accordion-padding-y:       $input-btn-padding-y;
+$accordion-padding-x:       $input-btn-padding-x;

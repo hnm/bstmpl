@@ -1,11 +1,9 @@
+
 // Core variables and mixins
 @import "../../n2nutil-bootstrap/scss/functions";
 @import "custom/custom";
-@import "../../n2nutil-bootstrap/scss/variables";
 @import "../../n2nutil-bootstrap/scss/mixins";
-
-// Reset and dependencies
-@import "../../n2nutil-bootstrap/scss/print";
+@import "../../n2nutil-bootstrap/scss/root";
 
 // Core CSS
 @import "../../n2nutil-bootstrap/scss/reboot";
@@ -37,25 +35,31 @@
 //@import "../../n2nutil-bootstrap/scss/close";
 
 // Components w/ JavaScript
+//@import "../../n2nutil-bootstrap/scss/toasts";
 //@import "../../n2nutil-bootstrap/scss/modal";
 //@import "../../n2nutil-bootstrap/scss/tooltip";
 //@import "../../n2nutil-bootstrap/scss/popover";
 //@import "../../n2nutil-bootstrap/scss/carousel";
+//@import "../../n2nutil-bootstrap/scss/spinners";
 
 // Utility classes
 @import "../../n2nutil-bootstrap/scss/utilities";
+@import "../../n2nutil-bootstrap/scss/print";
 
 
 // Customs
 @import "custom/util/browserBugFixes";
 
 @import 'custom/mixins';
+
 @import "custom/util/accessibility";
 //@import "custom/util/fyling-focus";
+
 @import "custom/icomoon/icomoon";
 @import "custom/layout";
 @import "custom/util/dev-helper";
 @import "custom/navigation";
+
 // @import "custom/util/fancyBox2";
 @import "custom/content-items";
 @import "custom/util/search";

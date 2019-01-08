@@ -84,8 +84,8 @@
 }
 
 .swatch-secondary {
-  color: #fff;
-  background-color: #6c757d;
+  color: #212529;
+  background-color: #97BF38;
 }
 
 .swatch-success {
@@ -145,27 +145,27 @@
 
 .swatch-secondary-d-200 {
   color: #fff;
-  background-color: #41464b;
+  background-color: #5b7322;
 }
 
 .swatch-secondary-d-100 {
   color: #fff;
-  background-color: #565e64;
+  background-color: #79992d;
 }
 
 .swatch-secondary {
-  color: #fff;
-  background-color: #6c757d;
+  color: #212529;
+  background-color: #97BF38;
 }
 
 .swatch-secondary-l-100 {
-  color: #fff;
-  background-color: #899197;
+  color: #212529;
+  background-color: #accc60;
 }
 
 .swatch-secondary-l-200 {
   color: #212529;
-  background-color: #a7acb1;
+  background-color: #c1d988;
 }
 
 .swatch-100 {
@@ -195,7 +195,7 @@
 
 .swatch-600 {
   color: #fff;
-  background-color: #6c757d;
+  background-color: #868e96;
 }
 
 .swatch-700 {
