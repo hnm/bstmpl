@@ -60,7 +60,7 @@
 	
 // 	$meta->addLink(['rel' => 'manifest', 'href' => $meta->getAssetUrl(['json', 'site.webmanifest'])]);
 // 	$meta->addLink(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => $meta->getAssetUrl(['img', 'favicon.png'], 'bstmpl')]);
-// 	$meta->addLink(['rel' => 'apple-touch-icon', 'href' => $meta->getAssetUrl(['img', 'apple-touch-icon-192x192.png'], 'bstmpl')]);
+// 	$meta->addLink(['rel' => 'apple-touch-icon', 'href' => $meta->getAssetUrl(['img', 'icon-192x192.png'], 'bstmpl')]);
 
 	
 	// 			var isTouch = function() {

@@ -2,7 +2,7 @@
   "short_name": "Application name short",
   "name": "Application name",
   "icons": [{
-    "src": "../img/apple-touch-icon-192x192.png",
+    "src": "../img/icon-192x192.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
