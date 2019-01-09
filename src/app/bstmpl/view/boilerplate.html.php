@@ -154,7 +154,7 @@
 					</div>
 					<div class="col-md-6">
 						<?php $html->link('https://n2n.rocks', 'CMS n2n Rocket', array('target' => '_blank', 'rel' => 'noopener')) ?>
-						&copy; 2018 <?php $html->link('https://www.hnm.ch', 
+						&copy; 2019 <?php $html->link('https://www.hnm.ch', 
 								'Webentwicklung und Webdesign HNM Winterthur', array('target' => '_blank', 'rel' => 'noopener')) ?>
 					</div>
 				</div>
