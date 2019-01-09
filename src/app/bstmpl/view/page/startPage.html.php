@@ -9,7 +9,7 @@
     $pageHtml = new PageHtmlBuilder($view);
     $pageHtml->meta()->applyMeta();
      
-    $view->useTemplate('..\bsTemplate.html', array('bodyClass' => 'ec-start-page'));
+    $view->useTemplate('..\bsTemplate.html');
 ?>
  
 <?php $view->panelStart(BsTemplateModel::PANEL_NAME_TOP) ?>

@@ -32,12 +32,13 @@
 		
 	$meta = $html->meta();
 	
-	$meta->addMeta(array('name' => 'author', 'content' => $meta->getPageName()));
-	$meta->addMeta(array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no'));
-	$meta->addMeta(array('content' => 'ie=edge', 'http-equiv' =>  'x-ua-compatible'));
+	$meta->addMeta(['name' => 'author', 'content' => $meta->getPageName()]);
+	$meta->addMeta(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']);
+	$meta->addMeta(['http-equiv' =>  'x-ua-compatible', 'content' => 'ie=edge']);
 	
-//	$meta->addMeta(array('name' => 'msapplication-TileImage', 'content' => $meta->getAssetUrl('img/win8-tile.png', 'bstmpl')));
-//	$meta->addMeta(array('name' => 'msapplication-TileColor', 'content' => '#b0b0b0'));
+//	$meta->addMeta(['name' => 'msapplication-TileImage', 'content' => $meta->getAssetUrl(['img', 'tile-558x558.png'], 'bstmpl')]);
+//	$meta->addMeta(['name' => 'msapplication-TileImage', 'content' => $meta->getAssetUrl(['img', 'tile-wide-558x270.png'], 'bstmpl')]);
+//	$meta->addMeta(['name' => 'msapplication-TileColor', 'content' => '#b0b0b0']);
 	if (N2N::isDevelopmentModeOn()) {
 		//$meta->addCssUrl('//diagnosticss.github.io/css/diagnosticss.css');
 	} else {
@@ -57,8 +58,10 @@
 // 	$meta->bodyEnd()->addJs('js/flying-focus.js');
 	$meta->bodyEnd()->addJs('js/functions.js');
 	
-// 	$meta->addLink(array('rel' => 'icon', 'type' => 'image/x-icon', 'href' => $meta->getAssetUrl('img/favicon.png', 'bstmpl')));
-// 	$meta->addLink(array('rel' => 'apple-touch-icon', 'href' => $meta->getAssetUrl('img/apple-touch-icon-180x180.png', 'bstmpl')));
+// 	$meta->addLink(['rel' => 'manifest', 'href' => $meta->getAssetUrl(['json', 'site.webmanifest'])]);
+// 	$meta->addLink(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => $meta->getAssetUrl(['img', 'favicon.png'], 'bstmpl')]);
+// 	$meta->addLink(['rel' => 'apple-touch-icon', 'href' => $meta->getAssetUrl(['img', 'apple-touch-icon-192x192.png'], 'bstmpl')]);
+
 	
 	// 			var isTouch = function() {
 	// 				if (("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch) {
@@ -86,6 +89,9 @@
 		<meta charset="<?php $html->out(N2n::CHARSET) ?>" />
 	<?php $html->headEnd() ?>
 	<?php $html->bodyStart() ?>
+		<!--[if lte IE 9]>
+			<p class="m-0 p-3 pb-3 text-center browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+		<![endif]-->
 		<ul class="skiplinks">
 			<?php if ($view->buildUrl($murlPageHome, false)): ?>
 				<li>
@@ -96,14 +102,14 @@
 			<li><a href="#main-container" accesskey="2"><?php $html->text('access_main') ?></a></li>
 			<?php if (false): ?>
 				<li><?php $html->link(MurlPage::tag(ContactPageController::class), null, 
-						array('accesskey' => 3))?></li>
+						['accesskey' => 3])?></li>
 				<li><a href="#search" accesskey="5"><?php $html->text('access_search') ?></a></li>
 			<?php endif ?>
 		</ul>
 		<header class="page-header">
 			<div class="<?php $html->out($containerClass) ?> d-flex align-items-center">
 				<div class="branding">
-					<?php $html->link($murlPageHome, $html->getImageAsset('img/logo.png', $meta->getPageName()), null, 'div') ?>
+					<?php $html->link($murlPageHome, $html->getImageAsset(['img', 'logo.png'], $meta->getPageName()), null, 'div') ?>
 				</div>
 				<a id="mobile-navi-toggle" role="button" class="ml-auto">
 					<span class="mobile-navi-bar"></span>
@@ -116,14 +122,14 @@
 			<div class="<?php $html->out($containerClass) ?>">
 				<?php if (null !== $view->buildUrl(MurlPage::home(), false)): ?>
 					<nav id="globalnavi" class="navbar-nav navbar-expand-md expand-nav" data-toggler-ref="#mobile-navi-toggle"  data-child-toggler-class="expand-nav-child-toggler d-lg-none" data-expand-limit="level-rel-1">
-						<?php $pageHtml->navigation(Nav::home(), array('class' => 'navbar-nav'), null, array('class' => 'nav-item'), array('class' => 'nav-link')) ?>
+						<?php $pageHtml->navigation(Nav::home(), ['class' => 'navbar-nav'], null, ['class' => 'nav-item'], ['class' => 'nav-link']) ?>
 					</nav>
 				<?php endif ?>
 				<nav id="sidenavi" class="nav-inline">
 				</nav>
 				<?php if (count($pageMeta->getN2nLocaleSwitchUrls()) > 1): ?>
 					<nav id="languagenavi" class="nav nav-inline">
-						<?php $pageHtml->localeSwitch(array('class' => 'nav nav-inline')) ?>
+						<?php $pageHtml->localeSwitch(['class' => 'nav nav-inline']) ?>
 					</nav>
 				<?php endif ?>
 			</div>
@@ -153,9 +159,9 @@
 						</p>
 					</div>
 					<div class="col-md-6">
-						<?php $html->link('https://n2n.rocks', 'CMS n2n Rocket', array('target' => '_blank', 'rel' => 'noopener')) ?>
+						<?php $html->link('https://n2n.rocks', 'CMS n2n Rocket', ['target' => '_blank']) ?>
 						&copy; 2019 <?php $html->link('https://www.hnm.ch', 
-								'Webentwicklung und Webdesign HNM Winterthur', array('target' => '_blank', 'rel' => 'noopener')) ?>
+								'Webentwicklung und Webdesign HNM Winterthur', ['target' => '_blank']) ?>
 					</div>
 				</div>
 			</div>

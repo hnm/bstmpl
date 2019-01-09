@@ -12,7 +12,7 @@
 
 	$pageHtml = new PageHtmlBuilder($view);
 	
-	$view->useTemplate('boilerplate.html', array('fluid' => $fluid));
+	$view->useTemplate('boilerplate.html', ['fluid' => $fluid]);
 	
 	$classNameMainContent = null;
 	
