@@ -3,13 +3,12 @@
 	use n2n\impl\web\ui\view\html\HtmlView;
 	use n2nutil\bootstrap\ui\Bs;
 	use bstmpl\model\ContactForm;
-	use n2n\impl\web\dispatch\ui\AriaFormHtmlBuilder;
     use page\ui\PageHtmlBuilder;
     use ch\hnm\util\n2n\bot\ui\BotHtmlBuilder;
 
 	$view = HtmlView::view($view);
-	$formHtml = HtmlView::formHtml($view);
-	$html = HtmlView::html($view);
+// 	$formHtml = HtmlView::formHtml($view);
+// 	$html = HtmlView::html($view);
 	
 	$contactForm = $view->getParam('contactForm');
 	$view->assert($contactForm instanceof ContactForm);
@@ -17,7 +16,7 @@
 	$pageHtml = new PageHtmlBuilder($view);
 	$pageHtml->meta()->applyMeta();
 	
-	$ariaFormHtml = new AriaFormHtmlBuilder($view);
+// 	$ariaFormHtml = new AriaFormHtmlBuilder($view);
 	$botHtml = new BotHtmlBuilder($view);
 	
 	$bsFormHtml = new BsFormHtmlBuilder($view, Bs::req()->row('col-sm-3', 'col-sm-9', 'offset-sm-3'));
