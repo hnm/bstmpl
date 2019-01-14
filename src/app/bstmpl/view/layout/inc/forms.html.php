@@ -1,15 +1,15 @@
 <?php 
 	use n2n\impl\web\ui\view\html\HtmlView;
 	use n2nutil\bootstrap\ui\BsFormHtmlBuilder;
-	use bstmpl\model\layout\bsExampleForm;
-use n2nutil\bootstrap\ui\Bs;
+	use bstmpl\model\layout\BsExampleForm;
+	use n2nutil\bootstrap\ui\Bs;
 	
 	$view = HtmlView::view($view);
 	$html = HtmlView::html($view);
 	
 	$bsFromHtml = new BsFormHtmlBuilder($view);
-	$bsExampleForm = $view->lookup(bsExampleForm::class);
-	$view->assert($bsExampleForm instanceof bsExampleForm);
+	$bsExampleForm = $view->lookup(BsExampleForm::class);
+	$view->assert($bsExampleForm instanceof BsExampleForm);
 	
 	
 ?>

@@ -13,5 +13,4 @@
     <p>In diesem File werden die wichtigsten Styles zusammengefasst.</p>
 </div>
 
-<?php $view->import('view\styleguide\include\colors.html') ?>
 <?php $view->import('view\styleguide\include\types.html') ?>

@@ -5,7 +5,7 @@ namespace bstmpl\model\layout;
 use n2n\web\dispatch\Dispatchable;
 use n2n\context\RequestScoped;
 
-class bsExampleForm implements Dispatchable, RequestScoped  {
+class BsExampleForm implements Dispatchable, RequestScoped  {
 	
 	protected $firstname;
 	protected $lastname;
