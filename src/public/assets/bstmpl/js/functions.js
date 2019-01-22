@@ -49,15 +49,14 @@ jQuery(document).ready(function($) {
         };
        
         ExpandNav = function(jqElemNav) {
-            this.jqElem = jqElemNav;
-            this.jqElemChild = jqElemNav.children(':first-child');
+            this.jqElem = jqElemNav.hide();
             this.jqElemToggler = $(this.jqElem.data('toggler-ref'));
             this.jqElemLiHasChildren = this.jqElem.find(".has-children");
             var _that = this;
            
             this.jqElemToggler.click(function(e) {
             	e.preventDefault();
-            	_that.jqElemChild.slideToggle("fast");
+            	_that.jqElem.slideToggle("fast");
             	_that.jqElemToggler.toggleClass("open");
             });
             
