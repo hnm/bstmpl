@@ -9,8 +9,10 @@ body {
 //  ==========================
 
 @if variable-exists(header-bg) {
-	.page-header {
-	  background-color: $header-bg;
+	@if ($header-bg) {
+		.page-header {
+		  background-color: $header-bg;
+		}
 	}
 }
 
