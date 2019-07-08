@@ -8,7 +8,7 @@
 @if($custom-ul-enabled) {
     .ci-cke ul,
     .bstmpl-cke ul,
-    ul.hai-list {
+    ul.bstmpl-list {
         list-style: none;
         padding-left: 0;
 
@@ -33,7 +33,7 @@
 
 @if (false) {
     @include media-breakpoint-up(sm) {
-        .hnm-list-2-col {
+        .bstmpl-list-2-col {
             columns: 2;
         }
     }
