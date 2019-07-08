@@ -6,38 +6,24 @@
 		}
 
 		body::after {
-			content: "xs";
-			position: fixed;
-			font-size: $font-size-sm;
-			bottom: 8px;
-			right: 8px;
-			background: rgba(0,0,0,0.7);
-			height: 25px;
-			width: 25px;
-			text-align: center;
-			color: white;
-			z-index: 10000;
-		}
-
-		@include media-breakpoint-only(sm) {
-			body::after {
-				content: "sm";
-			}
-		}
-		@include media-breakpoint-only(md) {
-			body::after {
-				content: "md";
-			}
-		}
-		@include media-breakpoint-only(lg) {
-			body::after {
-				content: "lg";
-			}
-		}
-		@include media-breakpoint-only(xl) {
-			body::after {
-				content: "xl";
-			}
-		}
+            content: "xs";
+            position: fixed;
+            font-size: 14px;
+            padding: 0 4px;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0,0,0,0.7);
+            text-align: center;
+            color: white;
+            z-index: 10000;
+        }
+        
+        @each $breakpoint, $width in $grid-breakpoints {
+            @include media-breakpoint-only($breakpoint) {
+                body::after {
+                    content: "#{$breakpoint}";
+                }
+            }
+        }
 	}
 }
