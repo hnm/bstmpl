@@ -2,7 +2,7 @@
 	use n2n\impl\web\ui\view\html\HtmlView;
 	use bstmpl\model\ApproachViewModel;
 	use n2n\util\StringUtils;
-use bstmpl\model\BsTemplateModel;
+	use bstmpl\model\BsTemplateModel;
 
 	$view = HtmlView::view($view);
 	$html = HtmlView::html($view);
