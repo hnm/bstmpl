@@ -52,11 +52,11 @@
 	//$meta->addJs('js/modernizr.js');
 	$meta->addLibrary(new JQueryLibrary(3));
 	$meta->addLibrary(new BootstrapLibrary(false, false));
-	$meta->addCss('css/style.css?v=' . (new DateTime())->format('YmdHis'));
+	$meta->addCss('css/style.css?v=' . BsTemplateModel::ASSETS_VERSION);
 //	$meta->bodyEnd()->addJs('js/jquery.stickyPanel.js');
 //	$meta->bodyEnd()->addJs('js/responsive-initializer.js');
 // 	$meta->bodyEnd()->addJs('js/flying-focus.js');
-	$meta->bodyEnd()->addJs('js/functions.js');
+	$meta->bodyEnd()->addJs('js/functions.js?v=' . BsTemplateModel::ASSETS_VERSION);
 	
 // 	$meta->addLink(['rel' => 'manifest', 'href' => $meta->getAssetUrl(['json', 'site.webmanifest'])]);
 // 	$meta->addLink(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => $meta->getAssetUrl(['img', 'favicon.png'], 'bstmpl')]);
