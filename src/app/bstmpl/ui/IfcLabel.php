@@ -13,16 +13,19 @@ class IfcLabel extends HtmlSnippet {
 	const POS_RIGHT = 'right';
 	
 	public function __construct(string $iconType, $contents = null, bool $textSrOnly = false, 
-			$pos = self::POS_LEFT, array $iAttrs = null) {
+			$pos = self::POS_LEFT, array $iAttrs = null, array $textAttrs = null) {
 		
 		ArgUtils::valEnum($pos, array(self::POS_LEFT, self::POS_RIGHT));
 		ArgUtils::valType($contents, array('string', UiComponent::class), true);
 		
 		$elemIcon = new HtmlElement('i', HtmlUtils::mergeAttrs((array) $iAttrs, 
-				array('aria-hidden' => 'true', 'class' => $iconType . ' ifc-' . $pos)), '');
+				['aria-hidden' => 'true', 'class' => $iconType . ' ifc-' . $pos]), '');
 		
-		if (null !== $contents && $textSrOnly) {
-			$contents = new HtmlElement('span', array('class' => 'sr-only'), $contents);
+		if (null !== $contents) {
+			if ($textSrOnly) {
+				$textAttrs = HtmlUtils::mergeAttrs((array) $textAttrs, ['class' => 'sr-only']);
+			}
+			$contents = new HtmlElement('span', $textAttrs, $contents);
 		}
 		
 		if ($pos === self::POS_LEFT) {
