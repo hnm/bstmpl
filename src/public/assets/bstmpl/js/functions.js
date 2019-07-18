@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
 				this.jqElemImg.css({
 					"display": "none"
 				});
-				_obj.jqElemImg.on('load', () => {
+				_obj.jqElemImg.on('load', function() {
 					_obj.update();
 				});
 					
