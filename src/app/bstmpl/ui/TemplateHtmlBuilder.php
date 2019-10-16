@@ -5,7 +5,7 @@ use n2n\impl\web\ui\view\html\HtmlView;
 use n2n\impl\web\ui\view\html\HtmlElement;
 use n2n\impl\web\ui\view\html\HtmlUtils;
 use n2n\io\managed\File;
-use n2nutil\bootstrap\img\MimgBs;
+use bootstrap\img\MimgBs;
 use n2n\impl\web\ui\view\html\img\Mimg;
 use n2n\impl\web\ui\view\html\img\ImgComposer;
 use n2n\web\ui\UiComponent;
