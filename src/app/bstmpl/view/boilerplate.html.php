@@ -4,7 +4,7 @@
 	use n2n\impl\web\ui\view\html\HtmlView;
 	use bstmpl\model\BsTemplateModel;
 	use page\ui\nav\Nav;
-	use n2nutil\bootstrap\ui\BootstrapLibrary;
+	use bootstrap\ui\BootstrapLibrary;
 	use page\model\nav\murl\MurlPage;
 	use n2nutil\jquery\JQueryLibrary;
 	use n2n\l10n\N2nLocale;

@@ -1,8 +1,8 @@
 <?php 
 	use n2n\impl\web\ui\view\html\HtmlView;
-	use n2nutil\bootstrap\ui\BsFormHtmlBuilder;
+	use bootstrap\ui\BsFormHtmlBuilder;
 	use bstmpl\model\layout\BsExampleForm;
-	use n2nutil\bootstrap\ui\Bs;
+	use bootstrap\ui\Bs;
 	
 	$view = HtmlView::view($view);
 	$html = HtmlView::html($view);

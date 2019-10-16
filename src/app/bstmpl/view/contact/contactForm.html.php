@@ -1,7 +1,7 @@
 <?php
-	use n2nutil\bootstrap\ui\BsFormHtmlBuilder;
+	use bootstrap\ui\BsFormHtmlBuilder;
 	use n2n\impl\web\ui\view\html\HtmlView;
-	use n2nutil\bootstrap\ui\Bs;
+	use bootstrap\ui\Bs;
 	use bstmpl\model\ContactForm;
     use page\ui\PageHtmlBuilder;
     use ch\hnm\util\n2n\bot\ui\BotHtmlBuilder;
