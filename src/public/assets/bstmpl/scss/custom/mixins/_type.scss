@@ -7,6 +7,7 @@
           url('#{$path}.svg?#{$timestamp}') format('svg');
       font-weight: #{$font-weight};
       font-style: #{$font-style};
+      font-display: swap;
 }
 
 @mixin font-face-web($familyName, $path, $font-weight, $font-style, $localNameVariants: null) {
@@ -29,6 +30,7 @@
         url('#{$path}.svg?') format('svg');
     font-weight: #{$font-weight};
     font-style: #{$font-style};
+    font-display: swap;
 }
 
 @mixin font-face-web-modern($familyName, $path, $font-weight, $font-style, $localNameVariants: null) {
@@ -49,6 +51,7 @@
           url(#{$path}.woff) format("woff");
     font-weight: #{$font-weight};
     font-style: #{$font-style};
+    font-display: swap;
 }
 
 
