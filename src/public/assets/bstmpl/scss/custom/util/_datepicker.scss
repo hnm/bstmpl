@@ -1,0 +1,131 @@
+/* datepicker */
+
+$datepicker-main-bg:					$body-bg;
+$datepicker-main-color:					$body-color;
+$datepicker-selected-color:				white;
+$datepicker-selected-bg:				$primary;
+
+$datepicker-navigation-bg:				$white;
+$datepicker-navigation-color:			$body-color;
+$datepicker-navigation-hover-color:		$primary;
+
+$datepicker-header-bg:					$white;
+$datepciker-header-hover-bg:			$gray-300;
+$datepicker-header-color:				$primary;
+$datepciker-header-hover-color:			white;
+
+$datepicker-navigation-label-weight:		bold;
+$datepicker-navigation-week-days-weight:	bold;
+
+
+.util-jquery-date-picker {
+	z-index: 100000;
+	background-color: $datepicker-main-bg !important;
+	border: none !important;
+	box-shadow: 0 2px 5px 0 rgba(black, 0.26) !important;
+	padding: 30px !important;
+}
+
+.util-jquery-date-picker-navigation {
+	background-color: $datepicker-navigation-bg !important;
+	color: $datepicker-navigation-color !important;
+	padding: 6px;
+	margin-bottom: 20px;
+}
+
+.util-jquery-date-picker-next,
+.util-jquery-date-picker-previous,
+.util-jquery-date-picker-navigation-label {
+	cursor: pointer;
+	display: inline-block;
+	color: $datepicker-navigation-color !important;
+	font-weight: bold !important;
+
+}
+.util-jquery-date-picker-next,
+.util-jquery-date-picker-previous {
+	width: 15%;
+}
+.util-jquery-date-picker-next {
+	text-align: right;
+}
+
+.util-jquery-date-picker-navigation-label {
+	width: 70%;
+	font-weight: $datepicker-navigation-label-weight;
+	text-align: center;
+}
+
+.util-jquery-date-picker-previous,
+.util-jquery-date-picker-next,
+.util-jquery-date-picker-navigation-label {
+	&:hover {
+		color: $datepicker-navigation-hover-color !important;
+	}
+}
+
+.util-jquery-picker-calender {
+	border-collapse: collapse;
+	background-color: $body-bg !important;
+}
+
+.util-jquery-date-picker-table-header {
+	background-color: $datepicker-main-bg !important;
+	color: $datepicker-main-color !important;
+	border-top: 0px solid $datepicker-main-color !important;
+	font-weight: $datepicker-navigation-week-days-weight;
+
+	& td,
+	& th {
+		text-transform: uppercase;
+		font-weight: inherit;
+	}
+}
+
+.util-jquery-picker-calender th {
+	padding: 6px 6px;
+	width: 35px !important;
+}
+
+.util-jquery-picker-calender td {
+	padding: 4px 8px !important;
+	text-align: right;
+	width: 35px !important;
+}
+
+.util-jquery-date-picker-pickable {
+	cursor: pointer;
+	color: $datepicker-main-color;
+	background-color: $body-bg !important;
+	text-align: center !important;
+}
+
+.util-jquery-date-picker-pickable-current {
+	background-color: rgba($datepicker-main-color, 0) !important;
+	font-weight: 200 !important;
+	color: $datepicker-selected-bg !important;
+	
+}
+
+.util-jquery-date-picker-pickable-current:not(.util-jquery-date-picker-pickable-selected) {
+	text-decoration: underline;
+}
+
+.util-jquery-date-picker-pickable-selected {
+	background-color: $datepicker-selected-bg !important;
+	color: $datepicker-selected-color !important;
+}
+
+.util-jquery-date-picker-pickable:not(.util-jquery-date-picker-pickable-disabled):hover {
+	background-color: $datepicker-selected-bg !important;
+	color: $datepicker-selected-color !important;
+}
+
+.util-jquery-date-picker-pickable-disabled,
+.util-jquery-date-picker-pickable-disabled {
+	&,
+	&:hover {
+		color: $gray-500 !important;
+		cursor: not-allowed !important;
+	}
+}
