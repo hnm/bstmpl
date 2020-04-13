@@ -11,10 +11,14 @@
 }
 
 .ci-image {
-	flex: 1;
 	figure {
 		max-width: 100%;
 	}
+}
+
+.ci-col .ci-image {
+	display: block;
+	min-height: 1px;
 }
 
 .img-fluid img {
