@@ -1,3 +1,10 @@
+html,
+body {
+		// add this to remove blurry font rendering on mac in firefox, chrome, safari
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 body {
 	background-color: $body-bg;
 	overflow-y: scroll;
