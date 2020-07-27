@@ -15,26 +15,11 @@ body {
 //  Header
 //  ==========================
 
-@if variable-exists(header-bg) {
-	@if ($header-bg) {
-		.page-header {
-		  background-color: $header-bg;
-		}
-	}
-}
 
 
 //  Footer
 //  ==========================
 
-@if variable-exists(footer-bg) {
-	@if ($footer-bg) {
-		.page-footer {
-			background-color: $footer-bg;
-			color: color-yiq($footer-bg);
-		}
-	}
-}
 
 .page-footer > div {
 	padding-top: 10px;
