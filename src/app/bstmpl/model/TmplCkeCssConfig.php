@@ -8,7 +8,7 @@ use rocket\impl\ei\component\prop\string\cke\model\CkeStyle;
 class TmplCkeCssConfig implements CkeCssConfig {
 	public function getContentCssUrls(HtmlView $view): ?array {
 		$meta = $view->getHtmlBuilder()->meta();
-		return array($meta->getAssetUrl('css/editor.css', 'bstmpl'));
+		return array($meta->getAssetUrl('css/editor.css?v=' . BsTemplateModel::ASSETS_VERSION, 'bstmpl'));
 	}
 	
 	public function getBodyClass(): ?string {
