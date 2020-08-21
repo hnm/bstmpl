@@ -29,7 +29,7 @@ class IconController extends ControllerAdapter {
 		$lines[] = '}';
 		
 		$contents .= implode(PHP_EOL, $lines);
-		$path = new FsPath(__DIR__  . '\..\ui\Ifc.php');
+		$path = new FsPath(__DIR__  . DIRECTORY_SEPARATOR . implode(DIRECTORY_SEPARATOR, ['..', 'ui', 'Ifc.php']));
 		
 		
 		
