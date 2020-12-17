@@ -20,6 +20,8 @@
 	$pageHtml = new PageHtmlBuilder($view);
 	$pageMeta = $pageHtml->meta();
 	$pageMeta->applySeMeta();
+
+	$googleAnalticsId = null; // should be in format: 'UA-XXXXX-Y'
 	
 	$murlPageHome = $view->buildUrl(MurlPage::home(), false);
 	if (null === $murlPageHome) {
@@ -42,8 +44,10 @@
 	if (N2N::isDevelopmentModeOn()) {
 		//$meta->addCssUrl('//diagnosticss.github.io/css/diagnosticss.css');
 	} else {
-		$meta->bodyEnd()->addJsCode("window.ga=function(){ga.q.push(arguments)},ga.q=[],ga.l=+new Date,ga('create','UA-XXXXX-Y','auto'),ga('set','transport','beacon'),ga('send','pageview');");
-		$meta->bodyEnd()->addJsUrl('https://www.google-analytics.com/analytics.js', false, false, ['async' => true]);
+		if (null !== $googleAnalticsId) {
+			$meta->bodyEnd()->addJsCode("window.ga=function(){ga.q.push(arguments)},ga.q=[],ga.l=+new Date,ga('create','UA-XXXXX-Y','auto'),ga('set','transport','beacon'),ga('send','pageview');");
+			$meta->bodyEnd()->addJsUrl('https://www.google-analytics.com/analytics.js', false, false, ['async' => true]);
+		}	
 	}
 	//$meta->addJs('js/modernizr.js');
 	$meta->addLibrary(new JQueryLibrary(3));
