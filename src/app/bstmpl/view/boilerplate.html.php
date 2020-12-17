@@ -45,7 +45,7 @@
 		//$meta->addCssUrl('//diagnosticss.github.io/css/diagnosticss.css');
 	} else {
 		if (null !== $googleAnalticsId) {
-			$meta->bodyEnd()->addJsCode("window.ga=function(){ga.q.push(arguments)},ga.q=[],ga.l=+new Date,ga('create','UA-XXXXX-Y','auto'),ga('set','transport','beacon'),ga('send','pageview');");
+			$meta->bodyEnd()->addJsCode("window.ga=function(){ga.q.push(arguments)},ga.q=[],ga.l=+new Date,ga('create',$googleAnalticsId,'auto'),ga('set','transport','beacon'),ga('send','pageview');");
 			$meta->bodyEnd()->addJsUrl('https://www.google-analytics.com/analytics.js', false, false, ['async' => true]);
 		}	
 	}
