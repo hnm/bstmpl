@@ -80,7 +80,10 @@ if (typeof window.hnm == 'undefined') {
 	hnm.initializerManager = new HnmInitializerManager();
 	
 	var HnmInitializer = function(defaultListener, runOnClassChange) {
-		this.runOnClassChange = runOnClassChange || true;
+		if (typeof(runOnClassChange) === 'undefined') {
+			runOnClassChange = true;
+		}
+		this.runOnClassChange = runOnClassChange;
 		this.lastListener = null;
 		this.defaultListener = defaultListener;
 		this.listeners = new Object();
