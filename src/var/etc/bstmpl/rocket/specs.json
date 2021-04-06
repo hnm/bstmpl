@@ -60,12 +60,15 @@
                         "displayInDetailView": true,
                         "displayInEditView": false,
                         "displayInAddView": false,
+                        "containerType": "item",
                         "constant": false,
                         "readOnly": true,
                         "mandatory": false,
-                        "draftable": false,
                         "minValue": "0",
-                        "maxValue": "4294967295"
+                        "maxValue": "4294967295",
+                        "prefixAddons": [],
+                        "suffixAddons": [],
+                        "quickSearchable": true
                     },
                     "label": "Id",
                     "objectProperty": "id",
@@ -78,10 +81,10 @@
                         "displayInDetailView": true,
                         "displayInEditView": true,
                         "displayInAddView": true,
+                        "containerType": "item",
                         "constant": false,
                         "readOnly": false,
                         "mandatory": true,
-                        "draftable": false,
                         "options": {
                             "internal": "Internal",
                             "external": "External"
@@ -93,7 +96,9 @@
                             "external": {
                                 "url": "url"
                             }
-                        }
+                        },
+                        "emptyLabel": null,
+                        "quickSearchable": true
                     },
                     "label": "Type",
                     "objectProperty": "type",
@@ -106,17 +111,14 @@
                         "displayInDetailView": true,
                         "displayInEditView": true,
                         "displayInAddView": true,
+                        "containerType": "item",
                         "constant": false,
                         "readOnly": false,
                         "mandatory": true,
-                        "draftable": false,
-                        "targetExtensions": {
-                            "page-page": null
-                        },
                         "targetRemovalStrategy": "selfRemove",
-                        "embeddedAddEnabled": false,
-                        "filtered": true,
-                        "hiddenIfTargetEmpty": false
+                        "hiddenIfTargetEmpty": false,
+                        "maxPicksNum": "20",
+                        "quickSearchable": true
                     },
                     "label": "Linked Page",
                     "objectProperty": "linkedPage",
@@ -129,14 +131,22 @@
                         "displayInDetailView": true,
                         "displayInEditView": true,
                         "displayInAddView": true,
+                        "containerType": "item",
                         "constant": false,
                         "readOnly": false,
                         "mandatory": true,
-                        "draftable": false,
+                        "minlength": null,
                         "maxlength": "255",
+                        "quickSearchable": true,
+                        "prefixAddons": [],
+                        "suffixAddons": [],
                         "relativeAllowed": true,
-                        "allowedProtocols": [],
-                        "autoScheme": "https"
+                        "allowedProtocols": [
+                            "http",
+                            "https"
+                        ],
+                        "autoScheme": "https",
+                        "lytebox": false
                     },
                     "label": "Url",
                     "objectProperty": "url",
@@ -149,11 +159,15 @@
                         "displayInDetailView": true,
                         "displayInEditView": true,
                         "displayInAddView": true,
+                        "containerType": "item",
                         "constant": false,
                         "readOnly": false,
                         "mandatory": false,
-                        "draftable": false,
+                        "minlength": null,
                         "maxlength": "255",
+                        "quickSearchable": true,
+                        "prefixAddons": [],
+                        "suffixAddons": [],
                         "multiline": false
                     },
                     "label": "Label",
