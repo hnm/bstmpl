@@ -33,6 +33,7 @@
 	"require-dev": {
 		"n2n/n2n-mail" : "^7.2.33",
 		"hnm/ci" : "^2.1.0",
-		"hnm/bootstrap": "^1.0.6"
+		"hnm/bootstrap": "^1.0.6",
+		"phpunit/phpunit" : "^9.5"
 	}
 }
