@@ -30,6 +30,11 @@
 			"bstmpl\\" : "src/app/bstmpl"
 		}
 	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"bstmpl\\" : "src/test/bstmpl"
+		}
+	},
 	"require-dev": {
 		"n2n/n2n-mail" : "^7.2.33",
 		"hnm/ci" : "^2.1.0",
