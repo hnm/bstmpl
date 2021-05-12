@@ -34,11 +34,10 @@ $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
-$cyan: 	#17a2b8 !default; 
+$cyan: 	#17a2b8 !default;
 
 
 $primary:             #ed8207;
-// $primary:             blue;
 $secondary:           #97BF38;
 // $success:             $secondary;
 // $info:                #4c97cb;
@@ -46,44 +45,6 @@ $secondary:           #97BF38;
 // $danger:              #E32413;
 $light:         		$gray-100;
 $dark:          		$gray-800;
-
-
-$project-gray-d-200:				$gray-800;
-$project-gray-d-100:				$gray-700;
-$project-gray:						$gray-600;
-$project-gray-l-100:				$gray-400;
-$project-gray-l-200:				$gray-100;
-
-$project-grays: (
-	"project-gray-d-200": 	$project-gray-d-200,
-	"project-gray-d-100": 	$project-gray-d-100,
-	"project-gray": 		$project-gray,
-	"project-gray-l-100": 	$project-gray-l-100,
-	"project-gray-l-200": 	$project-gray-l-200
-);
-
-$primary-d-200:         mix(black, $primary, 40);
-$primary-d-100:         mix(black, $primary, 20);
-$primary-l-100:         mix(white, $primary, 20);
-$primary-l-200:         mix(white, $primary, 40);
-
-$secondary-d-200:       mix(black, $secondary, 40);
-$secondary-d-100:       mix(black, $secondary, 20);
-$secondary-l-100:       mix(white, $secondary, 20);
-$secondary-l-200:       mix(white, $secondary, 40);
-
-$project-theme-colors: (
-	"primary-d-200": 	$primary-d-200,
-	"primary-d-100": 	$primary-d-100,
-	"primary": 			$primary,
-	"primary-l-100": 	$primary-l-100,
-	"primary-l-200": 	$primary-l-200,
-	"secondary-d-200": 	$secondary-d-200,
-	"secondary-d-100": 	$secondary-d-100,
-	"secondary": 		$secondary,
-	"secondary-l-100": 	$secondary-l-100,
-	"secondary-l-200": 	$secondary-l-200,
-);
 
 $gray-devider:        $gray-500;
 
@@ -272,7 +233,13 @@ $lead-font-weight:            300;
 $small-font-size:             80%;
 
 
+
+
+// ==== BOOTSTRAP CORE VARIABLES ====
 @import "../../../bootstrap/scss/variables";
+// ==== BOOTSTRAP CORE VARIABLES ====
+
+
 
 
 //  N2N variables
@@ -286,6 +253,47 @@ $search-enabled: false;
 $custom-ul-enabled: false;
 $responsive-initializer-enabled: false;
 $main-container-min-height-mode-flex: true;
+
+
+// theme / gray color scalings
+//  ==========================
+
+$project-gray-d-200:				$gray-800;
+$project-gray-d-100:				$gray-700;
+$project-gray:						$gray-600;
+$project-gray-l-100:				$gray-400;
+$project-gray-l-200:				$gray-100;
+
+$project-grays: (
+	"project-gray-d-200": 	$project-gray-d-200,
+	"project-gray-d-100": 	$project-gray-d-100,
+	"project-gray": 		$project-gray,
+	"project-gray-l-100": 	$project-gray-l-100,
+	"project-gray-l-200": 	$project-gray-l-200
+);
+
+$primary-d-200:         mix(black, $primary, 40);
+$primary-d-100:         mix(black, $primary, 20);
+$primary-l-100:         mix(white, $primary, 20);
+$primary-l-200:         mix(white, $primary, 40);
+
+$secondary-d-200:       mix(black, $secondary, 40);
+$secondary-d-100:       mix(black, $secondary, 20);
+$secondary-l-100:       mix(white, $secondary, 20);
+$secondary-l-200:       mix(white, $secondary, 40);
+
+$project-theme-colors: (
+	"primary-d-200": 	$primary-d-200,
+	"primary-d-100": 	$primary-d-100,
+	"primary": 			$primary,
+	"primary-l-100": 	$primary-l-100,
+	"primary-l-200": 	$primary-l-200,
+	"secondary-d-200": 	$secondary-d-200,
+	"secondary-d-100": 	$secondary-d-100,
+	"secondary": 		$secondary,
+	"secondary-l-100": 	$secondary-l-100,
+	"secondary-l-200": 	$secondary-l-200,
+);
 
 
 //  Css common paths
