@@ -163,10 +163,11 @@ CREATE TABLE `ci_simple_map` (
 
 
 DROP TABLE IF EXISTS `ci_three_columns`;
-CREATE TABLE `ci_three_columns` ( 
-	`id` INT UNSIGNED NOT NULL
-	, PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_general_ci ;
+CREATE TABLE IF NOT EXISTS `ci_three_columns` (
+  `id` int(11) NOT NULL,
+  `alignment` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `ci_three_columns` (`id`) 
 VALUES ( '15');
@@ -183,11 +184,14 @@ VALUES ( '15',  '16'),
 ( '15', '17'),
 ( '15', '18');
 
-DROP TABLE IF EXISTS `ci_two_columns`;
-CREATE TABLE `ci_two_columns` ( 
-	`id` INT UNSIGNED NOT NULL
-	, PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE utf8_general_ci ;
+-- Daten Export vom Benutzer nicht ausgewählt
+-- Exportiere Struktur von Tabelle mdl_ci.ci_two_columns
+CREATE TABLE IF NOT EXISTS `ci_two_columns` (
+  `id` int(11) NOT NULL,
+  `alignment` varchar(255) DEFAULT NULL,
+  `splitting` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `ci_two_columns` (`id`) 
 VALUES ( '9'),
