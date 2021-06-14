@@ -81,6 +81,27 @@ class TemplateHtmlBuilder {
 		$this->view->out($this->getFancyImage($image, $thumbComposer, $fancyComposer, $attrs, $imgAttrs, $fancyOptions, $htmlElement));
 	}
 	
+	/**
+	 *
+	 * @param string $tel
+	 * @param string|UiComponent $label
+	 * @param array $attrs
+	 */
+	public function linkTelProper(string $tel, $label = null, array $attrs = null) {
+		$this->view->out($this->getLinkTelProper($tel, $label, $attrs));
+	}
+	
+	/**
+	 * @param string $tel
+	 * @param string|UiComponent $label
+	 * @param array $attrs
+	 * @return \n2n\web\ui\Raw
+	 */
+	public function getLinkTelProper(string $tel, $label = null, array $attrs = null) {
+		// replace country-code "+41" from phone number in label with "0"
+		return $this->html->LinkTel(preg_replace('/^\+?(41)?0?\s*/', '+41', $tel), $label ? $label : preg_replace('/^\+?410?\s*/', '0', $tel), $attrs);
+	}
+	
 	
 // 	private $view;
 // 	private $html;
