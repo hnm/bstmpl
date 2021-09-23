@@ -22,6 +22,7 @@
 	$pageMeta->applySeMeta();
 
 	$googleAnalticsId = null; // should be in format: 'UA-XXXXX-Y'
+	$googleTagmanagerId = 'GTM-5H9BKXK'; // could be something like this: 'GTM-XXXXXXX'
 	
 	$murlPageHome = $view->buildUrl(MurlPage::home(), false);
 	if (null === $murlPageHome) {
@@ -45,9 +46,18 @@
 		//$meta->addCssUrl('//diagnosticss.github.io/css/diagnosticss.css');
 	} else {
 		if (null !== $googleAnalticsId) {
-			$meta->bodyEnd()->addJsCode("window.ga=function(){ga.q.push(arguments)},ga.q=[],ga.l=+new Date,ga('create',$googleAnalticsId,'auto'),ga('set','transport','beacon'),ga('send','pageview');");
-			$meta->bodyEnd()->addJsUrl('https://www.google-analytics.com/analytics.js', false, false, ['async' => true]);
-		}	
+			// <!-- Global site tag (gtag.js) - Google Analytics -->
+			$meta->bodyEnd()->addJsCode("window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+					gtag('js',new Date());gtag('config','" . $googleAnalticsId . "',{'anonymize_ip':!0})");
+			$meta->bodyEnd()->addJsUrl('https://www.googletagmanager.com/gtag/js?' . $googleAnalticsId, false, false, ['async' => true]);
+		}
+		if (null !== $googleTagmanagerId) {
+			$meta->addJsCode("(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','" . $googleTagmanagerId . "');");
+		}
 	}
 	//$meta->addJs('js/modernizr.js');
 	$meta->addLibrary(new JQueryLibrary(3));
@@ -89,6 +99,12 @@
 		<meta charset="<?php $html->out(N2n::CHARSET) ?>" />
 	<?php $html->headEnd() ?>
 	<?php $html->bodyStart() ?>
+		<?php if (!N2N::isDevelopmentModeOn() && null !== $googleTagmanagerId):  ?>
+			<!-- Google Tag Manager (noscript) -->
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php $html->out($googleTagmanagerId) ?>"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<!-- End Google Tag Manager (noscript) -->
+		<?php endif ?>
 		<!--[if lte IE 9]>
 			<p class="m-0 p-3 pb-3 text-center browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 		<![endif]-->
