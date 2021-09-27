@@ -122,44 +122,48 @@
 				<li><a href="#search" accesskey="5"><?php $html->text('access_search') ?></a></li>
 			<?php endif ?>
 		</ul>
-		<header class="page-header">
-			<div class="<?php $html->out($containerClass) ?> d-flex align-items-center">
-				<div class="branding">
-					<?php $html->link($murlPageHome, $html->getImageAsset(['img', 'logo.png'], $meta->getPageName()), null, 'div') ?>
+		<header>
+			<div class="page-header">
+				<div class="<?php $html->out($containerClass) ?> d-flex align-items-center">
+					<div class="branding">
+						<?php $html->link($murlPageHome, $html->getImageAsset(['img', 'logo.png'], $meta->getPageName()), null, 'div') ?>
+					</div>
+					<a id="mobile-navi-toggle" role="button" class="ml-auto">
+						<span class="mobile-navi-bar"></span>
+						<span class="mobile-navi-bar"></span>
+						<span class="mobile-navi-bar"></span>
+					</a>
 				</div>
-				<a id="mobile-navi-toggle" role="button" class="ml-auto">
-					<span class="mobile-navi-bar"></span>
-					<span class="mobile-navi-bar"></span>
-					<span class="mobile-navi-bar"></span>
-				</a>
+			</div>
+			<div class="navigation">
+				<div class="<?php $html->out($containerClass) ?>">
+					<?php if (null !== $view->buildUrl(MurlPage::home(), false)): ?>
+						<nav id="globalnavi" class="navbar-nav navbar-expand-md expand-nav" data-toggler-ref="#mobile-navi-toggle"  data-child-toggler-class="expand-nav-child-toggler d-lg-none" data-expand-limit="level-rel-1">
+							<?php $pageHtml->navigation(Nav::home(), ['class' => 'navbar-nav'], null, ['class' => 'nav-item'], ['class' => 'nav-link']) ?>
+						</nav>
+					<?php endif ?>
+					<nav id="sidenavi" class="nav-inline">
+					</nav>
+					<?php if (count($pageMeta->getN2nLocaleSwitchUrls()) > 1): ?>
+						<nav id="languagenavi" class="nav nav-inline">
+							<?php $pageHtml->localeSwitch(['class' => 'nav nav-inline']) ?>
+						</nav>
+					<?php endif ?>
+				</div>
 			</div>
 		</header>
-		<div class="navigation">
-			<div class="<?php $html->out($containerClass) ?>">
-				<?php if (null !== $view->buildUrl(MurlPage::home(), false)): ?>
-					<nav id="globalnavi" class="navbar-nav navbar-expand-md expand-nav" data-toggler-ref="#mobile-navi-toggle"  data-child-toggler-class="expand-nav-child-toggler d-lg-none" data-expand-limit="level-rel-1">
-						<?php $pageHtml->navigation(Nav::home(), ['class' => 'navbar-nav'], null, ['class' => 'nav-item'], ['class' => 'nav-link']) ?>
-					</nav>
-				<?php endif ?>
-				<nav id="sidenavi" class="nav-inline">
-				</nav>
-				<?php if (count($pageMeta->getN2nLocaleSwitchUrls()) > 1): ?>
-					<nav id="languagenavi" class="nav nav-inline">
-						<?php $pageHtml->localeSwitch(['class' => 'nav nav-inline']) ?>
-					</nav>
-				<?php endif ?>
-			</div>
-		</div>
 		
-		<?php if ($view->hasPanel(BsTemplateModel::PANEL_NAME_TOP)): ?>
-			<?php $view->importPanel(BsTemplateModel::PANEL_NAME_TOP) ?>
-		<?php endif ?>
-		
-		<?php $view->importContentView() ?>
-		
-		<?php if ($view->hasPanel(BsTemplateModel::PANEL_NAME_BOTTOM)): ?>
-			<?php $view->importPanel(BsTemplateModel::PANEL_NAME_BOTTOM) ?>
-		<?php endif ?>
+		<main>
+			<?php if ($view->hasPanel(BsTemplateModel::PANEL_NAME_TOP)): ?>
+				<?php $view->importPanel(BsTemplateModel::PANEL_NAME_TOP) ?>
+			<?php endif ?>
+			
+			<?php $view->importContentView() ?>
+			
+			<?php if ($view->hasPanel(BsTemplateModel::PANEL_NAME_BOTTOM)): ?>
+				<?php $view->importPanel(BsTemplateModel::PANEL_NAME_BOTTOM) ?>
+			<?php endif ?>
+		</main>
 	
 		<footer class="page-footer">
 			<div class="<?php $html->out($containerClass) ?>">
