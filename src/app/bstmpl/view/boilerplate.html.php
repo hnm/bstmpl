@@ -22,7 +22,7 @@
 	$pageMeta->applySeMeta();
 
 	$googleAnalticsId = null; // should be in format: 'UA-XXXXX-Y'
-	$googleTagmanagerId = 'GTM-5H9BKXK'; // could be something like this: 'GTM-XXXXXXX'
+	$googleTagmanagerId = null; // could be something like this: 'GTM-XXXXXXX'
 	
 	$murlPageHome = $view->buildUrl(MurlPage::home(), false);
 	if (null === $murlPageHome) {
