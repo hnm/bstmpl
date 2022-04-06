@@ -1,5 +1,5 @@
 /*!
-* HNM - Bootstrap v5.0.0
+* HNM - Bootstrap v5.1.3
  */
 
 // Configuration
@@ -47,22 +47,26 @@
 // Utilities
 @import "../../bootstrap/scss/utilities/api";
 
+
 // Customs
-@import "custom/util/browserBugFixes";
-
 @import 'custom/mixins';
-
+@import "custom/util/browserBugFixes";
 @import "custom/util/accessibility";
 //@import "custom/util/fyling-focus";
 
+
+// Icons
 @import "custom/icomoon/icomoon";
+
+
+// Structured Content
 @import "custom/layout";
 @import "custom/util/dev-helper";
 @import "custom/navigation";
 
 // @import "custom/util/fancyBox2";
 // @import "custom/util/fancyBox3";
-@import "custom/content-items";
+@import "custom/content-items"; 
 @import "custom/util/search";
 @import "custom/util/utils";
 // @import "custom/util/datepicker";
