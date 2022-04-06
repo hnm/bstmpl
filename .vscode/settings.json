@@ -2,7 +2,10 @@
 	"editor.tabSize": 4,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
-    "liveSassCompile.settings.formats":[
+    	"liveSassCompile.settings.watchOnLaunch": true,
+	"liveSassCompile.settings.showOutputWindowOn": "Information",
+	"liveSassCompile.settings.forceBaseDirectory": "/src/public/assets/bstmpl/scss",
+    	"liveSassCompile.settings.formats":[
         {
             "format": "expanded",
             "extensionName": ".css",
