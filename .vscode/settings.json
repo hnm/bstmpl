@@ -1,0 +1,26 @@
+{
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+    "liveSassCompile.settings.formats":[
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/src/public/assets/bstmpl/css"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**",
+        "**/rocket/**",
+        "**/font-awesome/**",
+         "**/n2nutil-bootstrap/**",
+         "**/bootstrap/**",
+         "**/hangar/**",
+		 "**/example-layout.scss"
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}
