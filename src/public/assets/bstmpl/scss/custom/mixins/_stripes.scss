@@ -1,12 +1,14 @@
-@mixin stripes($direction, $color, $num: $grid-columns, $gap: $grid-gutter-width/2, $opacity: 0.05) {
+@use "sass:math";
+
+@mixin stripes($direction, $color, $num: $grid-columns, $gap: $grid-gutter-width*0.5, $opacity: 0.05) {
 	$length: $num;
 	
 	@if $length > 1 {
 	  $stripes: ();
 	  
 	  @for $i from 0 through $length {
-		$stripe: (100% / $length) * ($i);
-		$gap: $grid-gutter-width/2;
+		$stripe: math.div(100%, $length) * ($i);
+		$gap: $grid-gutter-width*0.5;
 		
 		@if $i == 0 {
 			$stripes: append($stripes, rgba($color, 0) 0, comma);
