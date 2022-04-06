@@ -22,7 +22,7 @@
 	$pageMeta->applySeMeta();
 
 	$googleAnalticsId = null; // should be in format: 'UA-XXXXX-Y'
-	$googleTagmanagerId = 'GTM-5H9BKXK'; // could be something like this: 'GTM-XXXXXXX'
+	$googleTagmanagerId = null; // could be something like this: 'GTM-XXXXXXX'
 	
 	$murlPageHome = $view->buildUrl(MurlPage::home(), false);
 	if (null === $murlPageHome) {
@@ -180,7 +180,7 @@
 					</div>
 					<div class="col-md-6">
 						<?php $html->link('https://n2n.rocks', 'CMS n2n Rocket', ['target' => '_blank']) ?>
-						&copy; 2021 <?php $html->link('https://www.hnm.ch', 
+						&copy; 2022 <?php $html->link('https://www.hnm.ch', 
 								'Webentwicklung und Webdesign HNM Winterthur', ['target' => '_blank']) ?>
 					</div>
 				</div>
