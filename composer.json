@@ -24,7 +24,10 @@
 		"n2n/n2nutil-jquery" : "^1.2.6"
 	},
 	"config" : {
-		"vendor-dir" : "src/vendor"
+		"vendor-dir" : "src/vendor",
+		"allow-plugins": {
+			"n2n/n2n-composer-module-installer": true
+		}
 	},
 	"autoload" : {
 		"psr-4" : {
