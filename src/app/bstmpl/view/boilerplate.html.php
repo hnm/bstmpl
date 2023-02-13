@@ -49,7 +49,7 @@
 			// <!-- Global site tag (gtag.js) - Google Analytics -->
 			$meta->bodyEnd()->addJsCode("window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 					gtag('js',new Date());gtag('config','" . $googleAnalticsId . "',{'anonymize_ip':!0})");
-			$meta->bodyEnd()->addJsUrl('https://www.googletagmanager.com/gtag/js?' . $googleAnalticsId, false, false, ['async' => true]);
+			$meta->bodyEnd()->addJsUrl('https://www.googletagmanager.com/gtag/js?id=' . $googleAnalticsId, false, false, ['async' => true]);
 		}
 		if (null !== $googleTagmanagerId) {
 			$meta->addJsCode("(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
