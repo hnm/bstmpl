@@ -106,7 +106,7 @@
 			<!-- End Google Tag Manager (noscript) -->
 		<?php endif ?>
 		<!--[if lte IE 9]>
-			<p class="m-0 p-3 pb-3 text-center browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+			<p class="m-0 p-3 pb-3 text-center browserupgrade" data-search="excluded">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 		<![endif]-->
 		<ul class="skiplinks">
 			<?php if ($view->buildUrl($murlPageHome, false)): ?>
