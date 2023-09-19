@@ -95,7 +95,7 @@
 <!doctype html>
 <html class="no-js" lang="<?php $html->out($view->getN2nLocale()->getLanguageId()) ?>">
 	<?php $html->headStart() ?>
-		<!-- internet page created by hnm.ch -->
+		<!-- internet page created by hnm.ch @2023 -->
 		<meta charset="<?php $html->out(N2n::CHARSET) ?>" />
 	<?php $html->headEnd() ?>
 	<?php $html->bodyStart() ?>
@@ -180,7 +180,7 @@
 					</div>
 					<div class="col-md-6">
 						<?php $html->link('https://n2n.rocks', 'CMS n2n Rocket', ['target' => '_blank']) ?>
-						&copy; 2022 <?php $html->link('https://www.hnm.ch', 
+						&copy; <?php $html->out(date("Y")) ?> <?php $html->link('https://www.hnm.ch',
 								'Webentwicklung und Webdesign HNM Winterthur', ['target' => '_blank']) ?>
 					</div>
 				</div>
