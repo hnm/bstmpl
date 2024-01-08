@@ -1,11 +1,10 @@
 {
   "short_name": "Application name short",
   "name": "Application name",
-  "icons": [{
-    "src": "../img/icon-192x192.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
+ "icons": [
+        { "src": "../img/icon-192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "../img/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    ],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#ffffff",
   "theme_color": "#ffffff"
