@@ -55,3 +55,12 @@
 }
 
 
+@mixin font-face-web-variable($familyName, $path, $weightRange) {
+    font-family: #{$familyName};
+    font-weight: unquote($weightRange);
+    // double declared ursl because of old/new syntax --> https://css-tricks.com/newsletter/259-how-to-use-variable-fonts/, https://variablefonts.io/implementing-variable-fonts/
+    src: url('#{$path}.woff2') format("woff2 supports variations"),
+    url('#{$path}.woff2') format("woff2-variations");
+    font-display: swap;
+}
+
