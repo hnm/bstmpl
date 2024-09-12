@@ -37,11 +37,7 @@
 	
 	$meta->addMeta(['name' => 'author', 'content' => $meta->getPageName()]);
 	$meta->addMeta(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']);
-	$meta->addMeta(['http-equiv' =>  'x-ua-compatible', 'content' => 'ie=edge']);
 	
-//	$meta->addMeta(['name' => 'msapplication-TileImage', 'content' => $meta->getAssetUrl(['img', 'tile-558x558.png'], 'bstmpl')]);
-//	$meta->addMeta(['name' => 'msapplication-TileImage', 'content' => $meta->getAssetUrl(['img', 'tile-wide-558x270.png'], 'bstmpl')]);
-//	$meta->addMeta(['name' => 'msapplication-TileColor', 'content' => '#b0b0b0']);
 	if (N2N::isDevelopmentModeOn()) {
 		//$meta->addCssUrl('//diagnosticss.github.io/css/diagnosticss.css');
 	} else {
@@ -68,10 +64,12 @@
 // 	$meta->bodyEnd()->addJs('js/flying-focus.js');
 	$meta->bodyEnd()->addJs('js/functions.js?v=' . BsTemplateModel::ASSETS_VERSION);
 	
-// 	$meta->addLink(['rel' => 'manifest', 'href' => $meta->getAssetUrl(['json', 'site.webmanifest'])]);
-// 	$meta->addLink(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => $meta->getAssetUrl(['img', 'favicon.png'], 'bstmpl')]);
-// 	$meta->addLink(['rel' => 'apple-touch-icon', 'href' => $meta->getAssetUrl(['img', 'icon-192x192.png'], 'bstmpl')]);
+//	$meta->addLink(['rel' => 'manifest', 'href' => $meta->getAssetUrl(['json', 'site.webmanifest'])]);
+//	$meta->addLink(['rel' => 'icon', 'sizes' => '48x48', 'href' => $meta->getAssetUrl(['img', 'favicon.ico'], 'bstmpl')]);
+//	$meta->addLink(['rel' => 'icon', 'type' => 'image/svg+xml', 'href' => $meta->getAssetUrl(['img', 'icon.svg'], 'bstmpl')]);
+//	$meta->addLink(['rel' => 'apple-touch-icon', 'href' => $meta->getAssetUrl(['img', 'apple-touch-icon.png'], 'bstmpl')]); // 180x180
 
+	
 	
 	// 			var isTouch = function() {
 	// 				if (("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch) {
@@ -95,7 +93,7 @@
 <!doctype html>
 <html class="no-js" lang="<?php $html->out($view->getN2nLocale()->getLanguageId()) ?>">
 	<?php $html->headStart() ?>
-		<!-- internet page created by hnm.ch -->
+		<!-- internet page created by hnm.ch @2024 -->
 		<meta charset="<?php $html->out(N2n::CHARSET) ?>" />
 	<?php $html->headEnd() ?>
 	<?php $html->bodyStart() ?>
@@ -180,7 +178,7 @@
 					</div>
 					<div class="col-md-6">
 						<?php $html->link('https://n2n.rocks', 'CMS n2n Rocket', ['target' => '_blank']) ?>
-						&copy; 2022 <?php $html->link('https://www.hnm.ch', 
+						&copy; <?php $html->out(date("Y")) ?> <?php $html->link('https://www.hnm.ch',
 								'Webentwicklung und Webdesign HNM Winterthur', ['target' => '_blank']) ?>
 					</div>
 				</div>
