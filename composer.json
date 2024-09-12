@@ -20,7 +20,6 @@
 	"require" : {
 		"php" : ">=7.0",
 		"n2n/n2n-composer-module-installer" : "^7.1.5",
-		"n2n/page" : "^1.5.12",
 		"n2n/n2nutil-jquery" : "^1.2.6"
 	},
 	"config" : {
@@ -41,8 +40,12 @@
 	},
 	"require-dev": {
 		"n2n/n2n-mail" : "^7.2.33",
+        "n2n/page" : "^1.5.12",
 		"hnm/ci" : "^2.1.0",
 		"hnm/bootstrap": "^2.0.0",
 		"phpunit/phpunit" : "^9.5"
-	}
+	},
+    "suggest": {
+        "n2n/page" : "^1.5.12"
+    }
 }
