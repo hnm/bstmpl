@@ -1665,15 +1665,15 @@ $project-grays: (
 	"project-gray-l-200": 	$project-gray-l-200
 );
 
-$primary-d-200:         mix(black, $primary, 40);
-$primary-d-100:         mix(black, $primary, 20);
-$primary-l-100:         mix(white, $primary, 20);
-$primary-l-200:         mix(white, $primary, 40);
+$primary-d-200:         mix(black, $primary, 40%);
+$primary-d-100:         mix(black, $primary, 20%);
+$primary-l-100:         mix(white, $primary, 20%);
+$primary-l-200:         mix(white, $primary, 40%);
 
-$secondary-d-200:       mix(black, $secondary, 40);
-$secondary-d-100:       mix(black, $secondary, 20);
-$secondary-l-100:       mix(white, $secondary, 20);
-$secondary-l-200:       mix(white, $secondary, 40);
+$secondary-d-200:       mix(black, $secondary, 40%);
+$secondary-d-100:       mix(black, $secondary, 20%);
+$secondary-l-100:       mix(white, $secondary, 20%);
+$secondary-l-200:       mix(white, $secondary, 40%);
 
 $project-theme-colors: (
 	"primary-d-200": 	$primary-d-200,
