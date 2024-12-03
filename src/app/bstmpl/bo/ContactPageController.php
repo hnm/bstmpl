@@ -14,7 +14,7 @@ class ContactPageController extends PageController {
 		$ai->m('contact', new AnnoPage(true), new AnnoPageCiPanels('main'));
 	}
 	
-	public function contact(ContactController $contactController, array $delegateParams = null) {
+	public function contact(ContactController $contactController, ?array $delegateParams = null) {
 		$this->delegate($contactController);
 	}
 }

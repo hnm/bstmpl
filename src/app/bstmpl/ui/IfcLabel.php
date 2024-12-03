@@ -18,7 +18,7 @@ class IfcLabel extends HtmlSnippet {
 	// 	const POS_RIGHT = 'right';
 	
 	// 	public function __construct(string $iconType, $contents = null, bool $textSrOnly = false,
-	// 			$pos = self::POS_LEFT, array $iAttrs = null, array $textAttrs = null) {
+	// 			$pos = self::POS_LEFT, ?array $iAttrs = null, ?array $textAttrs = null) {
 	
 // 				ArgUtils::valEnum($pos, array(self::POS_LEFT, self::POS_RIGHT));
 // 				ArgUtils::valType($contents, array('string', UiComponent::class), true);
@@ -49,7 +49,7 @@ class IfcLabel extends HtmlSnippet {
 	const POS_RIGHT = 'right';
 	
 	public function __construct(string $icon, $contents = null, bool $textSrOnly = false,
-			$pos = self::POS_RIGHT, array $attrs = null, array $textAttrs = null) {
+			$pos = self::POS_RIGHT, ?array $attrs = null, ?array $textAttrs = null) {
 				ArgUtils::valEnum($pos, array(self::POS_LEFT, self::POS_RIGHT));
 				ArgUtils::valType($contents, array('string', UiComponent::class), true);
 				ArgUtils::valEnum($icon, (new \ReflectionClass(new Ifc()))->getConstants());

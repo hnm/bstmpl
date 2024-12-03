@@ -20,7 +20,7 @@ class TemplateHtmlBuilder {
 		$this->html = $view->getHtmlBuilder();
 		$this->meta = $this->html->meta();
 	}
-	public function getFancyImage(File $image = null, ImgComposer $thumbComposer = null, ImgComposer $fancyComposer = null, array $attrs = null, array $imgAttrs = null, array $fancyOptions = null, $htmlElement = null) {
+	public function getFancyImage(?File $image = null, ?ImgComposer $thumbComposer = null, ?ImgComposer $fancyComposer = null, ?array $attrs = null, ?array $imgAttrs = null, ?array $fancyOptions = null, $htmlElement = null) {
 		if ($thumbComposer === null) {
 			$thumbComposer = MimgBs::xs(Mimg::prop(497, 332))->sm(546)->md(690)->lg(910)->xl(1110);
 		}
@@ -77,7 +77,7 @@ class TemplateHtmlBuilder {
 		return $lyteBoxLink;
 	}
 	
-	public function fancyImage(File $image = null, $thumbComposer = null, $fancyComposer = null, array $attrs = null, array $imgAttrs = null, array $fancyOptions = null, $htmlElement = null) {
+	public function fancyImage(?File $image = null, $thumbComposer = null, $fancyComposer = null, ?array $attrs = null, ?array $imgAttrs = null, ?array $fancyOptions = null, $htmlElement = null) {
 		$this->view->out($this->getFancyImage($image, $thumbComposer, $fancyComposer, $attrs, $imgAttrs, $fancyOptions, $htmlElement));
 	}
 	
@@ -87,7 +87,7 @@ class TemplateHtmlBuilder {
 	 * @param string|UiComponent $label
 	 * @param array $attrs
 	 */
-	public function linkTelProper(string $tel, $label = null, array $attrs = null) {
+	public function linkTelProper(string $tel, $label = null, ?array $attrs = null) {
 		$this->view->out($this->getLinkTelProper($tel, $label, $attrs));
 	}
 	
@@ -97,7 +97,7 @@ class TemplateHtmlBuilder {
 	 * @param array $attrs
 	 * @return \n2n\web\ui\Raw
 	 */
-	public function getLinkTelProper(string $tel, $label = null, array $attrs = null) {
+	public function getLinkTelProper(string $tel, $label = null, ?array $attrs = null) {
 		// replace country-code "+41" from phone number in label with "0"
 		return $this->html->LinkTel(preg_replace('/^\+?(41)?0?\s*/', '+41', $tel), $label ? $label : preg_replace('/^\+?410?\s*/', '0', $tel), $attrs);
 	}
@@ -125,11 +125,11 @@ class TemplateHtmlBuilder {
 // 		$this->view->out($this->getYoutubeVideo($youtubeId));
 // 	}
 	
-// 	public function link($href, $label = null, array $attrs = null) {
+// 	public function link($href, $label = null, ?array $attrs = null) {
 // 		$this->view->out($this->getLink($href, $label, $attrs));
 // 	}
 	
-// 	public function getLink($href, $label = null, array $attrs = null) {
+// 	public function getLink($href, $label = null, ?array $attrs = null) {
 // 		$attrs = (null === $attrs) ? array() : $attrs;
 	
 // 		if (!isset($attrs['target'])) {
@@ -143,11 +143,11 @@ class TemplateHtmlBuilder {
 // 		return $this->html->getLink($href, $label, $attrs);
 // 	}
 	
-// 	public function pageOrExternalLink(Page $linkedPage = null, $linkExternal = null, $label = null, $attrs = null) {
+// 	public function pageOrExternalLink(?Page $linkedPage = null, $linkExternal = null, $label = null, $attrs = null) {
 // 		$this->view->out($this->getPageOrExternalLink($linkedPage, $linkExternal, $label, $attrs));
 // 	}
 	
-// 	public function getPageOrExternalLink(Page $linkedPage = null, $linkExternal = null, $label = null, $attrs = null) {
+// 	public function getPageOrExternalLink(?Page $linkedPage = null, $linkExternal = null, $label = null, $attrs = null) {
 // 		if (null === $linkedPage && null === $linkExternal) return null;
 	
 // 		if (null !== $linkedPage) {
@@ -223,7 +223,7 @@ class TemplateHtmlBuilder {
 // 		return $this->html->getImage($fileImage, $firstThumbStrategy, $attrs, false, false);
 // 	}
 	
-// 	public function getLyteboxImage(File $image = null,  $imageThumbStrategies = null, $lyteBoxThumbStrategies = null, array $attrs = null, array $imgAttrs = null, array $lyteOptions = null) {
+// 	public function getLyteboxImage(?File $image = null,  $imageThumbStrategies = null, $lyteBoxThumbStrategies = null, ?array $attrs = null, ?array $imgAttrs = null, ?array $lyteOptions = null) {
 // 		if (!$image instanceof File) return;
 	
 // 		if (!$imageThumbStrategies) {
@@ -302,7 +302,7 @@ class TemplateHtmlBuilder {
 	
 // 	}
 	
-// 	public function lyteboxImage(File $image = null, $imageThumbStrategies = null, $lyteBoxThumbStrategies = null, array $attrs = null, array $imgAttrs = null, array $lyteOptions = null) {
+// 	public function lyteboxImage(?File $image = null, $imageThumbStrategies = null, $lyteBoxThumbStrategies = null, ?array $attrs = null, ?array $imgAttrs = null, ?array $lyteOptions = null) {
 // 		$this->view->out($this->getLyteboxImage($image, $imageThumbStrategies, $lyteBoxThumbStrategies, $attrs, $imgAttrs, $lyteOptions));
 // 	}
 	
