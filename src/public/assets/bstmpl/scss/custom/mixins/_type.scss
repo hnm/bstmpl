@@ -54,7 +54,7 @@
     font-display: swap;
 }
 
-
+// convert ttf -> woff2: https://webfont.yabe.land/en/misc/convert-ttf-woff2/
 @mixin font-face-web-variable($familyName, $path, $weightRange) {
     font-family: #{$familyName};
     font-weight: unquote($weightRange);
