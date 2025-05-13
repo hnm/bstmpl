@@ -93,7 +93,7 @@
 <!doctype html>
 <html class="no-js" lang="<?php $html->out($view->getN2nLocale()->getLanguageId()) ?>">
 	<?php $html->headStart() ?>
-		<!-- internet page created by hnm.ch @2024 -->
+		<!-- internet page created by hnm.ch @2025 -->
 		<meta charset="<?php $html->out(N2n::CHARSET) ?>" />
 	<?php $html->headEnd() ?>
 	<?php $html->bodyStart() ?>
