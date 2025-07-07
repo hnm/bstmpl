@@ -100,7 +100,12 @@ class SimplePageLink extends ObjectAdapter implements UrlComposer {
 						return Url::create($this->url);
 					}
 					
-					$url = MurlPage::obj($this->linkedPage)->toUrl($n2nContext, $controllerContext, $suggestedLabel);
+					try {
+						$url = MurlPage::obj($this->linkedPage)->toUrl($n2nContext, $controllerContext, $suggestedLabel);
+					} catch (UnavailableUrlException $ex) {
+						return Url::create(null);
+					}
+			
 					if ($this->label !== null) {
 						$suggestedLabel = $this->label;
 					}
