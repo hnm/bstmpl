@@ -14,6 +14,7 @@ use page\model\nav\murl\MurlPage;
 use n2n\core\container\N2nContext;
 use n2n\web\http\controller\ControllerContext;
 use n2n\web\http\nav\UrlComposer;
+use n2n\util\uri\UnavailableUrlException;
 
 class SimplePageLink extends ObjectAdapter implements UrlComposer {
 	private static function _annos(AnnoInit $ai) {
