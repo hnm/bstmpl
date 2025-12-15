@@ -6,58 +6,33 @@
 	text-decoration: none;
 	display: inline-block;
 	cursor: pointer;
+    --bar-height: 2px;
+    --bar-margin: 6px;
 }
 
 .mobile-navi-bar {
-	background-color: currentColor;
+
 	position: relative;
 	display: block;
-	height: 2px;
+	background-color: currentColor;
 	width: 26px;
-	margin-top: 6px;
-	will-change: transform, width, top, left, opacity;
-	transform: rotate(0deg);
-	transition: $transition-base;
-	transition-property: transform, width, top, left, opacity;
+	height: var(--bar-height);
+	margin: var(--bar-margin) 0;
+    transform: rotate(0deg);
+    transition: $transition-base;
+    transition-property: transform, opacity;
 }
 
-.mobile-navi-bar:nth-child(1) {
-	top: 0px;
-	left: 0;
-	margin-top: 0;
-	transform-origin: left center;
-}
-
-.mobile-navi-bar:nth-child(2) {
-	top: 0px;
-	left: 0;
-	transform-origin: left center;
-}
-
-.mobile-navi-bar:nth-child(3) {
-	top: 0px;
-	left: 0;
-	transform-origin: left center;
-}
-
-#mobile-navi-toggle.open .mobile-navi-bar {
-	width: 24px;
-}
-
-#mobile-navi-toggle.open .mobile-navi-bar:nth-child(1),
-#mobile-navi-toggle.open .mobile-navi-bar:nth-child(3) {
-	transform: rotate(45deg);
-	top: 0px;
-	left: 4px;
+#mobile-navi-toggle.open .mobile-navi-bar:nth-child(1) {
+  transform: translateY(calc(var(--bar-height) + var(--bar-margin))) rotate(45deg);
 }
 
 #mobile-navi-toggle.open .mobile-navi-bar:nth-child(2) {
-	width: 0%;
-	opacity: 0;
+  opacity: 0;
 }
 
 #mobile-navi-toggle.open .mobile-navi-bar:nth-child(3) {
-	transform: rotate(-45deg);
+  transform: translateY(calc(-1 * calc(var(--bar-height) + var(--bar-margin)))) rotate(-45deg);
 }
 
 @include media-breakpoint-up(md) {
